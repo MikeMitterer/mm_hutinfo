@@ -1,0 +1,139 @@
+plugin.tx_mmhutinfo_pi2 {
+	// Allows Caching for this plugin
+	allowCaching = 1
+	allowCachingIfUserIsLoggedIn = 0
+	
+	// It is important to use the tablename AND the fieldname
+	// Othwerwise such fields like keywords could make problems!
+	searchFieldList = tx_mmhutinfo_hut.name, tx_mmhutinfo_hut.description,tx_mmhutinfo_area.name,tx_mmhutinfo_province.name
+	//tx_mmhutinfo_area,tx_mmhutinfo_province
+	
+	// Important!!! - the fieldnames used above must bin in the orderByList tool
+	orderByList = tx_mmhutinfo_hut.name
+	
+	// Ordering can be set like this too (field must be in orderByList)
+	order = tx_mmhutinfo_hut.name:0
+	//order = date_mod:1
+	
+	CMD =
+	pidList = {$plugin.tx_mmhutinfo_pi2.pidList}
+	//pidList = 
+	recursive =
+	
+	// Jump to this page to show the single-View
+	singlePid = 0
+	}
+
+plugin.tx_mmhutinfo_pi2 {
+	#JSOnLoadFunction = tabberAutomaticOnLoad();
+	JSOnLoadFunction.1 = tabberAutomatic();
+	}
+	
+// JS an CSS Settings
+plugin.tx_mmhutinfo_pi2 {
+	#JSOnLoadFunction.1 = onLoadKENTBREW();
+	
+	additionalHeaderData.1 = pi2/res/css/hutinfo.css
+	additionalHeaderData.2 = pi2/res/javascript/tabber.js
+	additionalHeaderData.3 = pi2/res/css/tabber.css
+	#additionalHeaderData.3 = pi2/res/css/buttons.css
+	}
+	
+plugin.tx_mmhutinfo_pi2.listView {
+	results_at_a_time = 10
+	maxPages =
+	colsOnPage = 1
+	showSearchBox = 0
+	showModeSelector = 0
+	showBrowserResults = 0
+	showHeader = 0
+	dontLinkActivePage = 1
+	showFirstLast = 0
+	pagefloat = CENTER
+	
+	// Baspath is the extensions /pi2/res/ folder
+	templateFile = /typo3conf/ext/mm_hutinfo/pi2/res/list_view.html
+	
+	// Avoids to put a table tag around the Template-Content
+	avoidTableTagAroundContent = 1
+	
+	showBrowserResults = 0
+}
+
+plugin.tx_mmhutinfo_pi2.singleView {
+	templateFile = single_view.html
+}
+
+//------------------------------------------------------------------------------
+// The supportet fieldnames for typodbfield
+// are: image, link, filelink, stdwrap, singlelink
+//
+plugin.tx_mmhutinfo_pi2.typodbfield {
+	// Dummyfields are not in the DB but if they are 
+	// in here a fieldvalue ist requestet for them in 
+	// the framework
+	//dummyfieldlist = preview,ziplink,normallink,cattitle,big_preview_image,details,shortdescription,more
+	// obsolet:
+	//	dummyfieldlist = pureuid,pureimage,preview,area,huttype,province,provinceimage,country,provincedesc,area_image,area_desc,hg_name,hg_description,hg_preview,hg_link,gkey,mailform_edit_page,editbutton,md5,touristregion,touristregdesc,touristregimage,touristreglink,way1,way2,way3,way4,way5,way6,way7,difficultytext,google,panorama,pureemail1,pureweb,pureemail2,purename
+	
+	
+	dummyfield { 
+		value = -- dummy --- 
+		}
+	
+	gkey {
+		// http://test2.intranet.bcserver.local/
+		//value = ABQIAAAAjSWBjqj5qB3HoQJQeKfuNRTu7J0W6JtfzL_3ziseytsPC1vUMhS-u6hPiH4Pii5_-qIJKT8CyUWjcA
+		
+		// http://test2.vmubuntu.mikemitterer.local/
+		value = ABQIAAAAjSWBjqj5qB3HoQJQeKfuNRSmB6z5YH5Vxr_ccWJ3Ndr0pV_bNhRc4fvCE-KXlU1pYHo4YOnMJ8N5yg
+		}
+		
+	google_centerpos_long { 
+		value = -- dummy --- 
+	}
+
+	google_centerpos_lat { 
+		value = -- dummy --- 
+	}
+
+	google_centerpos_zoom { 
+		value = -- dummy --- 
+	}
+	
+	google_width { 
+		value = -- dummy --- 
+	}
+
+	google_height { 
+		value = -- dummy --- 
+	}
+
+	#name {
+	#	singlelink = 1
+	#	fieldtype = singlelink
+	#}
+	
+	// Remove the underline if you want to have a preview picture
+	preview {
+		fieldtype = image
+		field = image
+		listNum = 0
+		
+		// Poroportions are OK - no Border
+		file.maxW = 100
+		file.maxH = 100
+		}		
+}
+
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_mmhutinfo_pi2._CSS_DEFAULT_STYLE (
+  .tx-mmhutinfo-pi2 H2 { margin-top: 0px; margin-bottom: 0px; }
+)
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_mmhutinfo_pi2._LOCAL_LANG.default {
+  pi_list_searchBox_search = Search!
+}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+plugin.tx_mmhutinfo_pi2._DEFAULT_PI_VARS.test = test

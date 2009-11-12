@@ -113,7 +113,14 @@
 			<label index="tx_mmhutinfo_hut.number">Number</label>
 			<label index="tx_mmhutinfo_hut.colorcode">Colorcode</label>
 			<label index="tx_mmhutinfo_hut.image2description">Picture2-Description</label>
+			<label index="tt_content.list_type_pi2">MM Hut-Manager Overview</label>	
 			
+			<label index="tt_content.pi_flexform.label.google_centerpos_long">Map Center - Longitude:</label>
+			<label index="tt_content.pi_flexform.label.google_centerpos_lat">Map Center - Latitude:</label>
+			<label index="tt_content.pi_flexform.label.google_centerpos_zoom">Zoom-Size:</label>
+			<label index="tt_content.pi_flexform.label.google_height">Height:</label>
+			<label index="tt_content.pi_flexform.label.google_width">Width:</label>
+					
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="tx_mmhutinfo_hutguide.name">Name</label>
@@ -221,6 +228,14 @@
 			<label index="tx_mmhutinfo_hut.colorcode">Farbwert</label>
 			<label index="tx_mmhutinfo_hut.image2description">Beschreibung</label>
 			<label index="tt_content.pi_flexform.label.mailform_edit_page">Bearbeitungsseite</label>
+			<label index="tt_content.list_type_pi2">MM Hut-Manager Übersicht</label>
+
+			<label index="tt_content.pi_flexform.label.google_centerpos_long">Kartenmitte - Längengrad:</label>
+			<label index="tt_content.pi_flexform.label.google_centerpos_lat">Kartenmitte - Breitengrad:</label>
+			<label index="tt_content.pi_flexform.label.google_centerpos_zoom">Darstellungsgröße:</label>
+			<label index="tt_content.pi_flexform.label.google_height">Höhe:</label>
+			<label index="tt_content.pi_flexform.label.google_width">Breite:</label>
+						
 		</languageKey>
 	</data>
 </T3locallang>

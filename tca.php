@@ -39,107 +39,107 @@ $TCA["tx_mmhutinfo_hutguide"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
 					),
 				),
 			)
 		),
-		"preview" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.preview",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
-				"show_thumbs" => 1,
+		'preview' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.preview',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
+				'show_thumbs' => 1,
 			)
 		),
-		"pdf" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.pdf",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "pdf",	
-				"disallowed" => "php,php3",	
-				"max_size" => 20000000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'pdf' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.pdf',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'pdf',	
+				'disallowed' => 'php,php3',	
+				'max_size' => 20000000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
-		"panorama" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.panorama",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
-				"show_thumbs" => 1,
+		'panorama' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hutguide.panorama',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
+				'show_thumbs' => 1,
 			)
 		),
 		
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], preview, pdf,panorama")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], preview, pdf,panorama')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
 
 
-$TCA["tx_mmhutinfo_extmap"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_extmap"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,publisher,mapnumber,description,isbn,preview"
+$TCA['tx_mmhutinfo_extmap'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_extmap']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,publisher,mapnumber,description,isbn,preview'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_extmap"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_extmap']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -171,88 +171,88 @@ $TCA["tx_mmhutinfo_extmap"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"publisher" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.publisher",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'publisher' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.publisher',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"mapnumber" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.mapnumber",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'mapnumber' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.mapnumber',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"isbn" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.isbn",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'isbn' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.isbn',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"preview" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.preview",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'preview' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_extmap.preview',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, publisher, mapnumber, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], isbn, preview")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, publisher, mapnumber, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], isbn, preview')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
 
 
-$TCA["tx_mmhutinfo_area"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_area"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,picture"
+$TCA['tx_mmhutinfo_area'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_area']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,picture'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_area"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_area']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -284,62 +284,62 @@ $TCA["tx_mmhutinfo_area"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"picture" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.picture",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'picture' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_area.picture',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], picture")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], picture')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
-$TCA["tx_mmhutinfo_touristregion"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_touristregion"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,picture"
+$TCA['tx_mmhutinfo_touristregion'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_touristregion']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,picture'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_touristregion"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_touristregion']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -371,38 +371,38 @@ $TCA["tx_mmhutinfo_touristregion"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"link" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.link",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
+		'link' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.link',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
 		         'wizards' => array(
 					'link' => Array(
 					    'type' => 'popup',
@@ -415,36 +415,36 @@ $TCA["tx_mmhutinfo_touristregion"] = Array (
 			  )
 		),
 		
-		"picture" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.picture",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 1500,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'picture' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_touristregion.picture',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 1500,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], link, picture")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], link, picture')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
-$TCA["tx_mmhutinfo_property"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_property"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,symbol"
+$TCA['tx_mmhutinfo_property'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_property']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,symbol'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_property"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_property']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -476,65 +476,65 @@ $TCA["tx_mmhutinfo_property"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"symbol" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.symbol",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"show_thumbs" => 1,	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'symbol' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_property.symbol',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'show_thumbs' => 1,	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], symbol")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], symbol')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
 
 
-$TCA["tx_mmhutinfo_type"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_type"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description"
+$TCA['tx_mmhutinfo_type'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_type']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_type"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_type']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -566,50 +566,50 @@ $TCA["tx_mmhutinfo_type"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_type.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_type.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_type.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_type.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts]")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts]')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
 
 
-$TCA["tx_mmhutinfo_province"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_province"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,country,image"
+$TCA['tx_mmhutinfo_province'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_province']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,name,description,country,image'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_province"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_province']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -641,71 +641,71 @@ $TCA["tx_mmhutinfo_province"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"country" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.country",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'country' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.country',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"image" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.image",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,
+		'image' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_province.image',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,
 			)
 		),
 	),
-	"types" => Array (
-		"0" => Array("showitem" => "sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], country, image")
+	'types' => Array (
+		'0' => Array('showitem' => 'sys_language_uid;;;;1-1-1, l18n_parent, l18n_diffsource, hidden;;1, name, description;;;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[mode=ts], country, image')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "")
+	'palettes' => Array (
+		'1' => Array('showitem' => '')
 	)
 );
 
 
-$TCA["tx_mmhutinfo_hut"] = Array (
-	"ctrl" => $TCA["tx_mmhutinfo_hut"]["ctrl"],
-	"interface" => Array (
-		"showRecordFieldList" => "sys_language_uid,l18n_parent,l18n_diffsource,hidden,starttime,endtime,fe_group,name,description,type_uid,property_uid,map_uid,hutguide_uid,company,person,tel1,fax,mobile,street,city,province_uid,area_uid,google_longitude,google_latitude,google_description,kitchen_description,height,open,beds,camp,waydescription,difficulty,walkingtime_min,length_km,altitude,free1,free2,free3,copyright,readyforprint"
+$TCA['tx_mmhutinfo_hut'] = Array (
+	'ctrl' => $TCA['tx_mmhutinfo_hut']['ctrl'],
+	'interface' => Array (
+		'showRecordFieldList' => 'sys_language_uid,l18n_parent,l18n_diffsource,hidden,starttime,endtime,fe_group,name,description,type_uid,property_uid,map_uid,hutguide_uid,company,person,tel1,fax,mobile,street,city,province_uid,area_uid,google_longitude,google_latitude,google_description,kitchen_description,height,open,beds,camp,waydescription,difficulty,walkingtime_min,length_km,altitude,free1,free2,free3,copyright,readyforprint'
 	),
-	"feInterface" => $TCA["tx_mmhutinfo_hut"]["feInterface"],
-	"columns" => Array (
+	'feInterface' => $TCA['tx_mmhutinfo_hut']['feInterface'],
+	'columns' => Array (
 		'sys_language_uid' => array (		
 			'exclude' => 1,
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
@@ -737,82 +737,82 @@ $TCA["tx_mmhutinfo_hut"] = Array (
 				'type' => 'passthrough'
 			)
 		),
-		"hidden" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.hidden",
-			"config" => Array (
-				"type" => "check",
-				"default" => "0"
+		'hidden' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '0'
 			)
 		),
-		"starttime" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.starttime",
-			"config" => Array (
-				"type" => "input",
-				"size" => "8",
-				"max" => "20",
-				"eval" => "date",
-				"default" => "0",
-				"checkbox" => "0"
+		'starttime' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
+			'config' => Array (
+				'type' => 'input',
+				'size' => '8',
+				'max' => '20',
+				'eval' => 'date',
+				'default' => '0',
+				'checkbox' => '0'
 			)
 		),
-		"endtime" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.endtime",
-			"config" => Array (
-				"type" => "input",
-				"size" => "8",
-				"max" => "20",
-				"eval" => "date",
-				"checkbox" => "0",
-				"default" => "0",
-				"range" => Array (
-					"upper" => mktime(0,0,0,12,31,2020),
-					"lower" => mktime(0,0,0,date("m")-1,date("d"),date("Y"))
+		'endtime' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
+			'config' => Array (
+				'type' => 'input',
+				'size' => '8',
+				'max' => '20',
+				'eval' => 'date',
+				'checkbox' => '0',
+				'default' => '0',
+				'range' => Array (
+					'upper' => mktime(0,0,0,12,31,2020),
+					'lower' => mktime(0,0,0,date('m')-1,date('d'),date('Y'))
 				)
 			)
 		),
-		"fe_group" => Array (		
-			"exclude" => 1,
-			"label" => "LLL:EXT:lang/locallang_general.xml:LGL.fe_group",
-			"config" => Array (
-				"type" => "select",
-				"items" => Array (
-					Array("", 0),
-					Array("LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login", -1),
-					Array("LLL:EXT:lang/locallang_general.xml:LGL.any_login", -2),
-					Array("LLL:EXT:lang/locallang_general.xml:LGL.usergroups", "--div--")
+		'fe_group' => Array (		
+			'exclude' => 1,
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+			'config' => Array (
+				'type' => 'select',
+				'items' => Array (
+					Array('', 0),
+					Array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
+					Array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
+					Array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--')
 				),
-				"foreign_table" => "fe_groups",
-				"foreign_table_where" => "ORDER BY title asc"
+				'foreign_table' => 'fe_groups',
+				'foreign_table_where' => 'ORDER BY title asc'
 			)
 		),
-		"name" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.name",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "required",
+		'name' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.name',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'required',
 			)
 		),
-		"number" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.number",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "5",	
-				"eval" => "num",
+		'number' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.number',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '5',	
+				'eval' => 'num',
 			)
 		),
 
-		"colorcode" => Array (		
-			"exclude" => 0,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.colorcode",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "10",
+		'colorcode' => Array (		
+			'exclude' => 0,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.colorcode',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '10',
 		         'wizards' => array(
 		               'colorpick' => array(
 		                   'type' => 'colorbox',
@@ -827,713 +827,713 @@ $TCA["tx_mmhutinfo_hut"] = Array (
 			)
 		),
 		
-		"description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
+		'description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
 					),
 				),
 			)
 		),
-		"type_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.type_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_type",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_type.uid",	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_type",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'type_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.type_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_type',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_type.uid',	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_type',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"property_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.property_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_property",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_property.uid",	
-				"size" => 10,	
-				"minitems" => 0,
-				"maxitems" => 99,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_property",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'property_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.property_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_property',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_property.uid',	
+				'size' => 10,	
+				'minitems' => 0,
+				'maxitems' => 99,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_property',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"hcity" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.city",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'hcity' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.city',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"map_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.map_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_extmap",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_extmap.uid",	
-				"size" => 5,	
-				"minitems" => 0,
-				"maxitems" => 2,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_extmap",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'map_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.map_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_extmap',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_extmap.uid',	
+				'size' => 5,	
+				'minitems' => 0,
+				'maxitems' => 2,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_extmap',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"hutguide_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.hutguide_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_hutguide",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_hutguide.uid",	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_hutguide",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'hutguide_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.hutguide_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_hutguide',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_hutguide.uid',	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_hutguide',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"company" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.company",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'company' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.company',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"person" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.person",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'person' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.person',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"tel1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel1",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'tel1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel1',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"tel2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel2",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'tel2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel2',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"tel3" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel3",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'tel3' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tel3',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"fax1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.fax1",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'fax1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.fax1',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"fax2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.fax2",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'fax2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.fax2',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"mobile1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.mobile1",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'mobile1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.mobile1',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"mobile2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.mobile2",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'mobile2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.mobile2',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"email1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email1",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'email1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email1',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"email1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email1",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'email1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email1',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"email2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email2",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'email2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.email2',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"web" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.web",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'web' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.web',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"street" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.street",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'street' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.street',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"areacode" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.areacode",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "10",
+		'areacode' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.areacode',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '10',
 			)
 		),
-		"city" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.city",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'city' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.city',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)	
 			
 		),
-		"province_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.province_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_province",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_province.uid",	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_province",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'province_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.province_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_province',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_province.uid',	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_province',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"area_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.area_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_area",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_area.uid",	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_area",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'area_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.area_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_area',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_area.uid',	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_area',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
-		"touristregion_uid" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.touristregion_uid",		
-			"config" => Array (
-				"type" => "select",	
-				"foreign_table" => "tx_mmhutinfo_touristregion",	
-				"foreign_table_where" => "ORDER BY tx_mmhutinfo_touristregion.uid",	
-				"size" => 1,	
-				"minitems" => 0,
-				"maxitems" => 1,	
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"_VERTICAL" => 1,
-					"add" => Array(
-						"type" => "script",
-						"title" => "Create new record",
-						"icon" => "add.gif",
-						"params" => Array(
-							"table"=>"tx_mmhutinfo_touristregion",
-							"pid" => "###CURRENT_PID###",
-							"setValue" => "prepend"
+		'touristregion_uid' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.touristregion_uid',		
+			'config' => Array (
+				'type' => 'select',	
+				'foreign_table' => 'tx_mmhutinfo_touristregion',	
+				'foreign_table_where' => 'ORDER BY tx_mmhutinfo_touristregion.uid',	
+				'size' => 1,	
+				'minitems' => 0,
+				'maxitems' => 1,	
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'_VERTICAL' => 1,
+					'add' => Array(
+						'type' => 'script',
+						'title' => 'Create new record',
+						'icon' => 'add.gif',
+						'params' => Array(
+							'table'=>'tx_mmhutinfo_touristregion',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
 						),
-						"script" => "wizard_add.php",
+						'script' => 'wizard_add.php',
 					),
 				),
 			)
 		),
 		
-		"google_longitude" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_longitude",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "nospace",
+		'google_longitude' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_longitude',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'nospace',
 			)
 		),
-		"google_latitude" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_latitude",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "nospace",
+		'google_latitude' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_latitude',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'nospace',
 			)
 		),
-		"google_description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'google_description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.google_description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"kitchen_description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.kitchen_description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'kitchen_description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.kitchen_description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
-		"height" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.height",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'height' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.height',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"opendesc" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.opendesc",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
+		'opendesc' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.opendesc',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
-		"bedsdesc" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.bedsdesc",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
-			)
-		),
-		
-		"beds" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.beds",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "int,nospace",
-			)
-		),
-		"camp" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.camp",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",	
-				"eval" => "int,nospace",
-			)
-		),
-		"waydescription" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"difficulty" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty",		
-			"config" => Array (
-				"type" => "radio",
-				"items" => Array (
-					Array("LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.0", "0"),
-					Array("LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.1", "1"),
-					Array("LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.2", "2"),
-					Array("LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.3", "3"),
-				),
-			)
-		),
-		"walkingtime" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.walkingtime",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
-			)
-		),
-		"length" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.length",		
-			"config" => Array (
-				"type" => "input",	
-				"size" => "30",
-			)
-		),
-		"altitude" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.altitude",		
-			"config" => Array (
-				"type" => "input",
-				"size" => "4",
-				"max" => "4",
-				"eval" => "int",
-				"checkbox" => "0",
-				"range" => Array (
-					"upper" => "1000",
-					"lower" => "10"
-				),
-				"default" => 0
-			)
-		),
-		"waydescription2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription2",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"waydescription3" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription3",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"waydescription4" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription4",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"waydescription5" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription5",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"waydescription6" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription6",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"waydescription7" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription7",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",
-				"rows" => "5",
-				"wizards" => Array(
-					"_PADDING" => 2,
-					"RTE" => Array(
-						"notNewRecords" => 1,
-						"RTEonly" => 1,
-						"type" => "script",
-						"title" => "Full screen Rich Text Editing|Formatteret redigering i hele vinduet",
-						"icon" => "wizard_rte2.gif",
-						"script" => "wizard_rte.php",
-					),
-				),
-			)
-		),
-		"imageway" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.imageway",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 8,	
-				"minitems" => 0,
-				"maxitems" => 5,
-				"show_thumbs" => 1,
-			)
-		),
-		"free1" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free1",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
-			)
-		),
-		"free2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free2",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
-			)
-		),
-		"free3" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free3",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
-			)
-		),
-		"copyright" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.copyright",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
-			)
-		),
-		"readyforprint" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.readyforprint",		
-			"config" => Array (
-				"type" => "check",
+		'bedsdesc' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.bedsdesc',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
 			)
 		),
 		
-		"image" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 3,	
-				"minitems" => 0,
-				"maxitems" => 3,
-				"show_thumbs" => 1,
+		'beds' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.beds',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'int,nospace',
 			)
 		),
-		"image2" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image2",		
-			"config" => Array (
-				"type" => "group",
-				"internal_type" => "file",
-				"allowed" => "gif,png,jpeg,jpg",	
-				"max_size" => 3000,	
-				"uploadfolder" => "uploads/tx_mmhutinfo",
-				"size" => 8,	
-				"minitems" => 0,
-				"maxitems" => 5,
-				"show_thumbs" => 1,
+		'camp' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.camp',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',	
+				'eval' => 'int,nospace',
 			)
 		),
-		"image2description" => Array (		
-			"exclude" => 1,		
-			"label" => "LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image2description",		
-			"config" => Array (
-				"type" => "text",
-				"cols" => "30",	
-				"rows" => "5",
+		'waydescription' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'difficulty' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty',		
+			'config' => Array (
+				'type' => 'radio',
+				'items' => Array (
+					Array('LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.0', '0'),
+					Array('LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.1', '1'),
+					Array('LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.2', '2'),
+					Array('LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.difficulty.I.3', '3'),
+				),
+			)
+		),
+		'walkingtime' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.walkingtime',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
+			)
+		),
+		'length' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.length',		
+			'config' => Array (
+				'type' => 'input',	
+				'size' => '30',
+			)
+		),
+		'altitude' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.altitude',		
+			'config' => Array (
+				'type' => 'input',
+				'size' => '4',
+				'max' => '4',
+				'eval' => 'int',
+				'checkbox' => '0',
+				'range' => Array (
+					'upper' => '1000',
+					'lower' => '10'
+				),
+				'default' => 0
+			)
+		),
+		'waydescription2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription2',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'waydescription3' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription3',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'waydescription4' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription4',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'waydescription5' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription5',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'waydescription6' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription6',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'waydescription7' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.waydescription7',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => Array(
+					'_PADDING' => 2,
+					'RTE' => Array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			)
+		),
+		'imageway' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.imageway',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 8,	
+				'minitems' => 0,
+				'maxitems' => 5,
+				'show_thumbs' => 1,
+			)
+		),
+		'free1' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free1',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
+			)
+		),
+		'free2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free2',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
+			)
+		),
+		'free3' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.free3',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
+			)
+		),
+		'copyright' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.copyright',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
+			)
+		),
+		'readyforprint' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.readyforprint',		
+			'config' => Array (
+				'type' => 'check',
+			)
+		),
+		
+		'image' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 3,	
+				'minitems' => 0,
+				'maxitems' => 3,
+				'show_thumbs' => 1,
+			)
+		),
+		'image2' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image2',		
+			'config' => Array (
+				'type' => 'group',
+				'internal_type' => 'file',
+				'allowed' => 'gif,png,jpeg,jpg',	
+				'max_size' => 3000,	
+				'uploadfolder' => 'uploads/tx_mmhutinfo',
+				'size' => 8,	
+				'minitems' => 0,
+				'maxitems' => 5,
+				'show_thumbs' => 1,
+			)
+		),
+		'image2description' => Array (		
+			'exclude' => 1,		
+			'label' => 'LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.image2description',		
+			'config' => Array (
+				'type' => 'text',
+				'cols' => '30',	
+				'rows' => '5',
 			)
 		),
 		
@@ -1541,8 +1541,8 @@ $TCA["tx_mmhutinfo_hut"] = Array (
 	// http://typo3.org/documentation/document-library/core-documentation/doc_core_api/4.0.0/view/4/2/
 	// http://typo3.org/documentation/document-library/core-documentation/doc_core_api/4.0.0/view/4/4/
 	// Ganz unten - showitem
-	"types" => Array (
-		"0" => Array("showitem" => "
+	'types' => Array (
+		'0' => Array('showitem' => '
 		--div--;LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tab.geneneral,
 		sys_language_uid;;;;1-1-1, 
 		l18n_parent, 
@@ -1612,10 +1612,10 @@ $TCA["tx_mmhutinfo_hut"] = Array (
 		--div--;LLL:EXT:mm_hutinfo/locallang_db.xml:tx_mmhutinfo_hut.tab.misc,
 		copyright;;;;1-1-1, 
 		readyforprint
-		")
+		')
 	),
-	"palettes" => Array (
-		"1" => Array("showitem" => "starttime, endtime, fe_group")
+	'palettes' => Array (
+		'1' => Array('showitem' => 'starttime, endtime, fe_group')
 	)
 );
 $TCA['tx_mmhutinfo_hut']['ctrl']['dividers2tabs'] = 1;

@@ -1,0 +1,154 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+-->
+<!--###PRE_LIST_ROW### begin -->
+			<div class="google_maps">
+				<script src="http://maps.google.com/maps?file=api&v=2&key=###GKEY###" type="text/javascript"></script>
+				<!-- Karte integrieren sowie Breite und Hšhe festlegen -->
+				<div id="map" style="width: ###GOOGLE_WIDTH###px; height: ###GOOGLE_HEIGHT###px;"></div> 
+				<!-- Falls im Browser kein Javascript aktiviert ist wird diese Meldung ausgegeben -->
+				<noscript>Du mu§t in deinem Browser JavaScript aktivieren um Google Maps zu verwenden</noscript>
+				
+				<script type="text/javascript">
+				//<![CDATA[
+				if (GBrowserIsCompatible()) {
+				// Marker erstellen
+				function createMarker(pointMarker,html) {
+					//markerOptions = { icon:specialIcon };				
+					//var marker = new GMarker(pointMarker,markerOptions);
+					var marker = new GMarker(pointMarker);
+					// Zeige Info Fenster bei Klick
+					GEvent.addListener(marker, 'click', function() {
+						marker.openInfoWindowHtml(html);
+						});
+					return marker;
+				}
+				
+				// Suche von Long / Lat: http://www.vorlagen.uni-erlangen.de/vorlagen/karten/tool-map.shtml
+				// long + = map nach unten
+				// lat + = map nach rechts 
+				var map 		= new GMap2(document.getElementById("map"));
+				var pointCenter = new GLatLng(###GOOGLE_CENTERPOS_LAT###,###GOOGLE_CENTERPOS_LONG###);
+
+		        map.addMapType(G_PHYSICAL_MAP); // GelŠnde
+		        map.addMapType(G_SATELLITE_3D_MAP); // Earth
+				
+				map.addControl(new GLargeMapControl()); // zeigt per default G_NORMAL_MAP, G_SATELLITE_MAP, G_HYBRID_MAP
+				map.addControl(new GMapTypeControl());
+				map.setCenter(pointCenter,###GOOGLE_CENTERPOS_ZOOM###, G_HYBRID_MAP);
+
+				// Eigenes Icon erstellen
+				// shadow, icon dimensions, etc.
+				var specialIcon = new GIcon(G_DEFAULT_ICON);
+				specialIcon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+				specialIcon.iconSize = new GSize(30, 23);
+				specialIcon.shadowSize = new GSize(37, 34);
+				specialIcon.iconAnchor = new GPoint(9, 34);
+				specialIcon.infoWindowAnchor = new GPoint(9, 2);
+				specialIcon.image = "typo3conf/ext/mm_hutinfo/pi2/res/images/icon-gmaps.gif";
+				}
+				//]]>
+				</script>
+				
+<!--###PRE_LIST_ROW### end -->
+				
+<!--###LIST_ROW### begin -->
+  	<!--###LIST_COL### begin -->
+				<script type="text/javascript">
+				//<![CDATA[
+				
+				// 2 Icons mit Info-Fenster
+				var pointMarker = new GLatLng(###GOOGLE_LONGITUDE###,###GOOGLE_LATITUDE###);
+				var marker = createMarker(pointMarker,'<div style="color: #000000;font-weight: bold;">###NAME###</div>###PREVIEW###')
+				map.addOverlay(marker);
+				
+				//]]>
+				</script>
+  	<!--###LIST_COL### end -->
+				
+<!--###LIST_ROW### end -->
+<!--###POST_LIST_ROW### begin -->
+			</div>
+		  <p style="clear: both;"/><!--###PRE_LIST_ROW### end -->
+<!--###POST_LIST_ROW### end -->
+
+<!-- ###LIST_SELECTOR### begin -->
+	<div class="scroll">
+		<ul class="###SELECTOR_NAME###">
+		<!-- ###SELECTOR_ITEM### begin -->
+			<li>###SELECTOR_ITEM_LINK###</li>
+		<!-- ###SELECTOR_ITEM### end -->
+		</ul>
+	</div>
+<!-- ###LIST_SELECTOR### end -->
+
+<!-- ###COMBO_SELECTOR### begin -->
+	<div class="combo">
+	<script type="text/javascript">
+	function onSelect(combo) {
+		  var urlFromCombo = combo.options[combo.selectedIndex].value;
+		  //alert(urlFromCombo);
+		  if(urlFromCombo != '') window.location.href = urlFromCombo;   
+		}
+	</script>
+	<div class="label">###LABEL###</div>
+	<select name="###SELECTOR_NAME###" class="###SELECTOR_NAME###" onChange="javascript:onSelect(this);">
+		<option value="">###FIRSTCOMBOENTRY###</option>
+	<!-- ###SELECTOR_ITEM### begin -->
+		<option value="###SELECTOR_ITEM_LINK_URL###" ###SELECTED###>###VALUE###</option>
+	<!-- ###SELECTOR_ITEM### end -->
+	</select>
+	</div>
+<!-- ###COMBO_SELECTOR### end -->
+
+<!-- ###EDIT_FORM### begin -->
+						<div class="changerecord">
+					  		<form action="/index.php?id=###MAILFORM_EDIT_PAGE###" method="post" name="edit_hutinfo">
+					  			<input type="hidden" name="uid" value="###PUREUID###" />
+					  			<input type="hidden" name="md5" value="###MD5###" />
+					  			<input type="hidden" name="name" value="###PURENAME###" />
+					  			
+					  			<!-- Hauptdate -->
+				  				<input type="hidden" name="description" value="###DESCRIPTION###" />
+				  				<input type="hidden" name="opendesc" value="###OPENDESC###" />
+				  				<input type="hidden" name="hcity" value="###HCITY###" />
+				  				<input type="hidden" name="height" value="###HEIGHT###" />
+				  				<input type="hidden" name="bedsdesc" value="###BEDSDESC###" />
+				  				<input type="hidden" name="kitchen_description" value="###KITCHEN_DESCRIPTION###" />
+								<!-- HÃ¼tte -->
+				  				<input type="hidden" name="person" value="###PERSON###" />
+				  				<input type="hidden" name="tel1" value="###TEL1###" />
+				  				<input type="hidden" name="fax1" value="###FAX1###" />
+				  				<input type="hidden" name="mobile1" value="###MOBILE1###" />
+				  				<input type="hidden" name="email1" value="###PUREEMAIL1###" />
+				  				<input type="hidden" name="web" value="###PUREWEB###" />
+								<!-- Tal -->
+				  				<input type="hidden" name="company" value="###COMPANY###" />
+				  				<input type="hidden" name="tel2" value="###TEL2###" />
+				  				<input type="hidden" name="tel3" value="###TEL3###" />
+				  				<input type="hidden" name="fax2" value="###FAX2###" />
+				  				<input type="hidden" name="mobile2" value="###MOBILE2###" />
+				  				<input type="hidden" name="email2" value="###PUREEMAIL2###" />
+				  				<input type="hidden" name="street" value="###STREET###" />
+				  				<input type="hidden" name="areacode" value="###AREACODE###" />
+				  				<input type="hidden" name="city" value="###CITY###" />
+				  				<input type="hidden" name="pureimage" value="###PUREIMAGE###" />
+								<!-- Wege -->
+				  				<input type="hidden" name="waydescription" value="###WAYDESCRIPTION###" />
+				  				<input type="hidden" name="waydescription2" value="###WAYDESCRIPTION2###" />
+				  				<input type="hidden" name="waydescription3" value="###WAYDESCRIPTION3###" />
+				  				<input type="hidden" name="waydescription4" value="###WAYDESCRIPTION4###" />
+				  				<input type="hidden" name="waydescription5" value="###WAYDESCRIPTION5###" />
+				  				<input type="hidden" name="waydescription6" value="###WAYDESCRIPTION6###" />
+				  				<input type="hidden" name="waydescription7" value="###WAYDESCRIPTION7###" />
+								<!-- copyright -->
+				  				<input type="hidden" name="copyright" value="###COPYRIGHT###" />
+				  				
+					  			<input type="submit" value="&Auml;ndern"/>
+					  		</form>
+					  	</div>
+					  	
+<!-- ###EDIT_FORM### end -->
+
+<!--###TEMPLATE_DEFAULT### end -->
+

@@ -249,7 +249,18 @@ t3lib_extMgm::addStaticFile($_EXTKEY,'pi1/static/mailformplus/','MM Hut-Manager-
 
 // add FlexForm field to tt_content
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY."_pi1"]='pi_flexform';
-
 t3lib_extMgm::addPiFlexFormValue($_EXTKEY."_pi1", 'FILE:EXT:mm_hutinfo/flexform_ds_pi1.xml');
+
+//-------------------------------------------------------------------------------------------------
+// Plugin II --------------------------------------------------------------------------------------
+//
+$TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_pi2']='layout,select_key';
+t3lib_extMgm::addPlugin(array('LLL:EXT:mm_hutinfo/locallang_db.xml:tt_content.list_type_pi2',$_EXTKEY . '_pi2',t3lib_extMgm::extRelPath($_EXTKEY) . 'ext_icon.gif'),'list_type');
+
+t3lib_extMgm::addStaticFile($_EXTKEY,'pi2/static/','MM Hut-Manager Overview');
+
+// add FlexForm field to tt_content
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY."_pi2"]='pi_flexform';
+t3lib_extMgm::addPiFlexFormValue($_EXTKEY."_pi2", 'FILE:EXT:mm_hutinfo/flexform_ds_pi2.xml');
 
 ?>

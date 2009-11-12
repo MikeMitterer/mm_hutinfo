@@ -1,0 +1,291 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+
+	Beschreibungsplatzhalter:
+		Beispiel:
+			Feldname: testfeld
+			Generierte Einträge:
+			
+			###LABEL_TESFELD_CLASS###
+			###LABEL_TESFELD###
+			###TESFELD_CLASS###
+			###TESFELD###
+-->
+<!-- ###SINGLEVIEW### begin -->
+<h1>###NAME### / ###AREA###</h1>
+<div class="tabberlive">
+	<div class="tabber">
+		<div class="tabbertab description">
+			<h2>Beschreibung</h2>
+			<div ###IMAGE_CLASS###>###IMAGE###</div>
+			
+			<div ###LABEL_NAME_CLASS###>###LABEL_NAME###</div>
+			<div ###NAME_CLASS###>###NAME###</div>
+			
+			<div ###LABEL_HUTTYPE_CLASS###>###LABEL_HUTTYPE###</div>
+			<div ###HUTTYPE_CLASS###>###HUTTYPE###</div>
+			
+			<div ###LABEL_TOURISTREGION_CLASS###>###LABEL_TOURISTREGION###</div>
+			<div ###TOURISTREGION_CLASS###>###TOURISTREGION###</div>
+			
+			<div ###LABEL_COUNTRY_CLASS###>###LABEL_COUNTRY###</div>
+			<div ###COUNTRY_CLASS###>###PROVINCE### / ###COUNTRY###</div>
+			
+			<div ###LABEL_DESCRIPTION_CLASS###>###LABEL_DESCRIPTION###</div>
+			<div ###DESCRIPTION_CLASS###>###DESCRIPTION###</div>
+
+			<div ###LABEL_OPENDESC_CLASS###>###LABEL_OPENDESC###</div>
+			<div ###OPENDESC_CLASS###>###OPENDESC###</div>
+
+			<div ###LABEL_HEIGHT_CLASS###>###LABEL_HEIGHT###</div>
+			<div ###HEIGHT_CLASS###>###HEIGHT###</div>
+
+			<div class="betten">
+				<div ###LABEL_BEDS_CLASS###>###LABEL_BEDS###</div>
+				<div ###BEDS_CLASS###>###BEDS###</div>
+	
+				<div ###LABEL_CAMP_CLASS###>###LABEL_CAMP###</div>
+				<div ###CAMP_CLASS###>###CAMP###</div>
+			</div>
+			
+			<div ###LABEL_KITCHEN_DESCRIPTION_CLASS###>###LABEL_KITCHEN_DESCRIPTION###</div>
+			<div ###KITCHEN_DESCRIPTION_CLASS###>###KITCHEN_DESCRIPTION###</div>
+			
+			<div ###IMAGE2_CLASS###>###IMAGE2###</div>
+			<p style="clear: both;"/>
+		</div>
+
+		<div class="tabbertab">
+			<h2>Wege</h2>
+			###WAY1###
+			###WAY2###
+			###WAY3###
+			###WAY4###
+			###WAY5###
+			###WAY6###
+			###WAY7###
+			
+			<div ###IMAGEWAY_CLASS###>###IMAGEWAY###</div>
+			<p style="clear: both;"/>
+		</div>
+		
+		<div class="tabbertab">
+			<h2>H&#252;ttenf&#252;hrer</h2>
+			<div class="hut_guide">
+				<div ###HG_PREVIEW_CLASS###>###HG_PREVIEW###</div>
+				<div ###LABEL_HG_NAME_CLASS###>###LABEL_HG_NAME###</div>
+				<div ###HG_NAME_CLASS###>###HG_NAME###</div>
+				<div ###HG_DESCRIPTION_CLASS###>###HG_DESCRIPTION###</div>
+
+				<div ###LABEL_HG_LINK_CLASS###>###LABEL_HG_LINK###</div>
+				<div ###HG_LINK_CLASS###>###HG_LINK###</div>
+			</div>
+			<p style="clear: both;"/>
+		</div>		
+		<div class="tabbertab">
+			<h2>Gebiet</h2>
+			<div ###AREA_IMAGE_CLASS###>###AREA_IMAGE###</div>
+
+			<div ###LABEL_AREA_CLASS###>###LABEL_AREA###</div>
+			<span ###AREA_CLASS###>###AREA###</span><br/>
+			<span ###AREA_DESC_CLASS###>###AREA_DESC###</span>
+
+			<div class="tourist_region">
+				<div ###TOURISTREGIMAGE_CLASS###>###TOURISTREGIMAGE###</div>
+				<div ###LABEL_TOURISTREGION_CLASS###>###LABEL_TOURISTREGION###</div>
+				<div ###TOURISTREGION_CLASS###>###TOURISTREGION###</div>
+				<div ###TOURISTREGDESC_CLASS###>###TOURISTREGDESC###</div>
+			</div>
+
+			<div class="area_province">
+				<div ###PROVINCEIMAGE_CLASS###>###PROVINCEIMAGE###</div>
+				<div ###LABEL_PROVINCE_CLASS###>###LABEL_PROVINCE###</div>
+				<div ###PROVINCE_CLASS###>###PROVINCE### / ###COUNTRY###</div>
+				<div ###PROVINCEDESC_CLASS###>###PROVINCEDESC###</div>
+			</div>
+			
+			
+			<p style="clear: both;"/>
+		</div>		
+		<div class="tabbertab">
+			<h2>Google</h2>
+			<div class="google_maps">
+				<script src="http://maps.google.com/maps?file=api&v=2&key=###GKEY###" type="text/javascript"></script>
+				<!-- Karte integrieren sowie Breite und Höhe festlegen -->
+				<div id="map" style="width: 450px; height: 350px;"></div> 
+				<!-- Falls im Browser kein Javascript aktiviert ist wird diese Meldung ausgegeben -->
+				<noscript>Du mußt in deinem Browser JavaScript aktivieren um Google Maps zu verwenden</noscript>
+				
+				<script type="text/javascript">
+				//<![CDATA[
+				if (GBrowserIsCompatible()) {
+				// Marker erstellen
+				function createMarker(pointMarker,html) {
+				var marker = new GMarker(pointMarker);
+				// Zeige Info Fenster bei Klick
+				GEvent.addListener(marker, 'click', function() {
+				marker.openInfoWindowHtml(html);
+				});
+				return marker;
+				}
+				
+				// Suche von Long / Lat: http://www.vorlagen.uni-erlangen.de/vorlagen/karten/tool-map.shtml
+				// long + = map nach unten
+				// lat + = map nach rechts 
+				var map 		= new GMap2(document.getElementById("map"));
+				var pointMarker = new GLatLng(###GOOGLE_LONGITUDE###,###GOOGLE_LATITUDE###);
+				var pointCenter = new GLatLng(###GOOGLE_LONGITUDE### + 0.008,###GOOGLE_LATITUDE###  - 0.008);
+				
+				map.addControl(new GLargeMapControl());
+				map.addControl(new GMapTypeControl());
+				map.setCenter(pointCenter,14, G_HYBRID_MAP);
+				
+				// 2 Icons mit Info-Fenster
+				
+				var marker = createMarker(pointMarker,'<div style="color: #000000;font-weight: bold;">###NAME###</div>')
+				map.addOverlay(marker);
+				}
+				//]]>
+				</script>
+			</div>
+			<p style="clear: both;"/>
+		</div>		
+		
+		<div class="tabbertab">
+			<h2>Kontakt</h2>
+			<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="contact_hut">
+					<!-- <h4>H&uuml;tte</h4>  -->
+					<div ###LABEL_PERSON_CLASS###>###LABEL_PERSON###</div>
+					<div ###PERSON_CLASS###>###PERSON###</div>
+					
+					<div ###LABEL_TEL1_CLASS###>###LABEL_TEL1###</div>
+					<div ###TEL1_CLASS###>###TEL1###</div>
+					
+					<div ###LABEL_FAX1_CLASS###>###LABEL_FAX1###</div>
+					<div ###FAX1_CLASS###>###FAX1###</div>
+					
+					<div ###LABEL_MOBILE1_CLASS###>###LABEL_MOBILE1###</div>
+					<div ###MOBILE1_CLASS###>###MOBILE1###</div>
+	
+					<div ###LABEL_EMAIL1_CLASS###>###LABEL_EMAIL1###</div>
+					<div ###EMAIL1_CLASS###>###EMAIL1###</div>
+					
+					<div ###LABEL_WEB_CLASS###>###LABEL_WEB###</div>
+					<div ###WEB_CLASS###>###WEB###</div>
+
+					<div ###LABEL_HCITY_CLASS###>###LABEL_HCITY###</div>
+					<div ###HCITY_CLASS###>###HCITY###</div>
+				</td>
+				<td class="contact_owner">
+					<!-- <h4>Talanschrift</h4> -->
+					<div ###LABEL_COMPANY_CLASS###>###LABEL_COMPANY###</div>
+					<div ###COMPANY_CLASS###>###COMPANY###</div>
+	
+					<div ###LABEL_TEL2_CLASS###>###LABEL_TEL2###</div>
+					<div ###TEL2_CLASS###>###TEL2###</div>
+	
+					<div ###LABEL_TEL3_CLASS###>###LABEL_TEL3###</div>
+					<div ###TEL3_CLASS###>###TEL3###</div>
+					
+					<div ###LABEL_FAX2_CLASS###>###LABEL_FAX2###</div>
+					<div ###FAX2_CLASS###>###FAX2###</div>
+					
+					<div ###LABEL_MOBILE2_CLASS###>###LABEL_MOBILE2###</div>
+					<div ###MOBILE2_CLASS###>###MOBILE2###</div>
+	
+					<div ###LABEL_EMAIL2_CLASS###>###LABEL_EMAIL2###</div>
+					<div ###EMAIL2_CLASS###>###EMAIL2###</div>
+					
+					<div ###LABEL_STREET_CLASS###>###LABEL_STREET###</div>
+					<div ###STREET_CLASS###>###STREET###</div>
+					
+					<div ###LABEL_CITY_CLASS###>###LABEL_CITY###</div>
+					<span ###AREACODE_CLASS###>###AREACODE###</span>-<span ###CITY_CLASS###>###CITY###</span>
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+	</div>
+</div>
+<div class="copyrightcontainer">
+	<div ###LABEL_COPYRIGHT_CLASS###>Copyright</div>
+	<div ###COPYRIGHT_CLASS###>###COPYRIGHT###</div>
+</div>
+<!-- ###SINGLEVIEW### end -->
+
+<!--###WAYBLOCK1### begin -->
+			<div class="way1">
+				<!-- Fußweg -->
+				<div ###LABEL_WAYDESCRIPTION_CLASS###>###LABEL_WAYDESCRIPTION###</div>
+				<div ###WAYDESCRIPTION_CLASS###>###WAYDESCRIPTION###</div>
+
+				<!--
+				<div class="details">
+					<div ###LABEL_DIFFICULTYTEXT_CLASS###>###LABEL_DIFFICULTYTEXT###</div>
+					<div ###DIFFICULTYTEXT_CLASS###>###DIFFICULTYTEXT###</div>
+					
+					<div ###LABEL_WALKINGTIME_CLASS###>###LABEL_WALKINGTIME###</div>
+					<div ###WALKINGTIME_CLASS###>###WALKINGTIME###</div>
+	
+					<div ###LABEL_LENGTH_CLASS###>###LABEL_LENGTH###</div>
+					<div ###LENGTH_CLASS###>###LENGTH###</div>
+	
+					<div ###LABEL_ALTITUDE_CLASS###>###LABEL_ALTITUDE###</div>
+					<div ###ALTITUDE_CLASS###>###ALTITUDE###</div>
+				</div>
+				-->		
+			</div>
+<!--###WAYBLOCK1### end -->
+		
+<!-- ###WAYBLOCK2### begin -->
+			<div class="way2">
+				<!-- Mit dem Auto -->
+				<div ###LABEL_WAYDESCRIPTION2_CLASS###>###LABEL_WAYDESCRIPTION2###</div>
+				<div ###WAYDESCRIPTION2_CLASS###>###WAYDESCRIPTION2###</div>
+			</div>
+<!-- ###WAYBLOCK2### end -->
+
+<!--###WAYBLOCK3### begin -->
+			<div class="way3">
+				<!-- Aufstiegshilfen -->
+				<div ###LABEL_WAYDESCRIPTION3_CLASS###>###LABEL_WAYDESCRIPTION3###</div>
+				<div ###WAYDESCRIPTION3_CLASS###>###WAYDESCRIPTION3###</div>
+			</div>
+<!--###WAYBLOCK3### end -->
+
+<!--###WAYBLOCK4### begin -->
+			<div class="way4">
+				<!-- Mit dem Rad -->
+				<div ###LABEL_WAYDESCRIPTION4_CLASS###>###LABEL_WAYDESCRIPTION4###</div>
+				<div ###WAYDESCRIPTION4_CLASS###>###WAYDESCRIPTION4###</div>
+			</div>
+<!--###WAYBLOCK4### end -->
+			
+<!--###WAYBLOCK5### begin -->
+			<div class="way5">
+				<!-- Skitouren -->
+				<div ###LABEL_WAYDESCRIPTION5_CLASS###>###LABEL_WAYDESCRIPTION5###</div>
+				<div ###WAYDESCRIPTION5_CLASS###>###WAYDESCRIPTION5###</div>
+			</div>
+<!--###WAYBLOCK5### end -->
+			
+<!--###WAYBLOCK6### begin -->
+			<div class="way6">
+				<!-- Wandertipps -->
+				<div ###LABEL_WAYDESCRIPTION6_CLASS###>###LABEL_WAYDESCRIPTION6###</div>
+				<div ###WAYDESCRIPTION6_CLASS###>###WAYDESCRIPTION6###</div>
+			</div>
+<!--###WAYBLOCK6### end -->
+			
+<!--###WAYBLOCK7### begin -->
+			<div class="way7">
+				<!-- Wegbeschreibung 7 -->
+				<div ###LABEL_WAYDESCRIPTION7_CLASS###>###LABEL_WAYDESCRIPTION7###</div>
+				<div ###WAYDESCRIPTION7_CLASS###>###WAYDESCRIPTION7###</div>
+			</div>
+<!--###WAYBLOCK7### end -->
+
+<!--###TEMPLATE_DEFAULT### end -->
