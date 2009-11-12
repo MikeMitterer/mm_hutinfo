@@ -1,0 +1,111 @@
+<!--###TEMPLATE_DEFAULT### begin
+	Help template for the default language, english
+-->
+<!--###LIST_ROW### begin -->
+  <div ###ROWCLASS###> 
+  	<!--###LIST_COL### begin -->
+	  	<table border="0" cellpadding="0" cellspacing="0" class="hut_list">
+	  		<tr>
+		  		<td ###PREVIEW_CLASS###>###PREVIEW###</td>
+		  		<td class="description_container">
+				  	<div ###NAME_CLASS###><h2>###NAME###</h2></div>
+				  	<div ###DESCRIPTION_CLASS###>###DESCRIPTION###</div>
+				  	<table border="0" cellpadding="0" cellspacing="0" class="detail_container">
+				  		<tr>
+					  		<td><span class="label">Bundesland:</span></td>
+					  		<td><div ###PROVINCE_CLASS###>###PROVINCE###</div></td>
+				  		</tr>
+				  		<tr>
+					  		<td><span class="label">Region:</span></td>
+					  		<td><div ###TOURISTREGION_CLASS###>###TOURISTREGION###</div>
+					  		###EDITBUTTON###
+					  		</td>
+				  		</tr>
+				  	</table>
+		  		</td>
+	  		</tr>
+	  	</table>
+  	<!--###LIST_COL### end -->
+  </div>
+<!--###LIST_ROW### end -->
+
+<!-- ###LIST_SELECTOR### begin -->
+	<div class="scroll">
+		<ul class="###SELECTOR_NAME###">
+		<!-- ###SELECTOR_ITEM### begin -->
+			<li>###SELECTOR_ITEM_LINK###</li>
+		<!-- ###SELECTOR_ITEM### end -->
+		</ul>
+	</div>
+<!-- ###LIST_SELECTOR### end -->
+
+<!-- ###COMBO_SELECTOR### begin -->
+	<div class="combo">
+	<script type="text/javascript">
+	function onSelect(combo) {
+		  var urlFromCombo = combo.options[combo.selectedIndex].value;
+		  //alert(urlFromCombo);
+		  if(urlFromCombo != '') window.location.href = urlFromCombo;   
+		}
+	</script>
+	<div class="label">###LABEL###</div>
+	<select name="###SELECTOR_NAME###" class="###SELECTOR_NAME###" onChange="javascript:onSelect(this);">
+		<option value="">###FIRSTCOMBOENTRY###</option>
+	<!-- ###SELECTOR_ITEM### begin -->
+		<option value="###SELECTOR_ITEM_LINK_URL###" ###SELECTED###>###VALUE###</option>
+	<!-- ###SELECTOR_ITEM### end -->
+	</select>
+	</div>
+<!-- ###COMBO_SELECTOR### end -->
+
+<!-- ###EDIT_FORM### begin -->
+						<div class="changerecord">
+					  		<form action="/index.php?id=###MAILFORM_EDIT_PAGE###" method="post" name="edit_hutinfo">
+					  			<input type="hidden" name="uid" value="###PUREUID###" />
+					  			<input type="hidden" name="md5" value="###MD5###" />
+					  			<input type="hidden" name="name" value="###PURENAME###" />
+					  			
+					  			<!-- Hauptdate -->
+				  				<input type="hidden" name="description" value="###DESCRIPTION###" />
+				  				<input type="hidden" name="opendesc" value="###OPENDESC###" />
+				  				<input type="hidden" name="hcity" value="###HCITY###" />
+				  				<input type="hidden" name="height" value="###HEIGHT###" />
+				  				<input type="hidden" name="bedsdesc" value="###BEDSDESC###" />
+				  				<input type="hidden" name="kitchen_description" value="###KITCHEN_DESCRIPTION###" />
+								<!-- Hütte -->
+				  				<input type="hidden" name="person" value="###PERSON###" />
+				  				<input type="hidden" name="tel1" value="###TEL1###" />
+				  				<input type="hidden" name="fax1" value="###FAX1###" />
+				  				<input type="hidden" name="mobile1" value="###MOBILE1###" />
+				  				<input type="hidden" name="email1" value="###PUREEMAIL1###" />
+				  				<input type="hidden" name="web" value="###PUREWEB###" />
+								<!-- Tal -->
+				  				<input type="hidden" name="company" value="###COMPANY###" />
+				  				<input type="hidden" name="tel2" value="###TEL2###" />
+				  				<input type="hidden" name="tel3" value="###TEL3###" />
+				  				<input type="hidden" name="fax2" value="###FAX2###" />
+				  				<input type="hidden" name="mobile2" value="###MOBILE2###" />
+				  				<input type="hidden" name="email2" value="###PUREEMAIL2###" />
+				  				<input type="hidden" name="street" value="###STREET###" />
+				  				<input type="hidden" name="areacode" value="###AREACODE###" />
+				  				<input type="hidden" name="city" value="###CITY###" />
+				  				<input type="hidden" name="pureimage" value="###PUREIMAGE###" />
+								<!-- Wege -->
+				  				<input type="hidden" name="waydescription" value="###WAYDESCRIPTION###" />
+				  				<input type="hidden" name="waydescription2" value="###WAYDESCRIPTION2###" />
+				  				<input type="hidden" name="waydescription3" value="###WAYDESCRIPTION3###" />
+				  				<input type="hidden" name="waydescription4" value="###WAYDESCRIPTION4###" />
+				  				<input type="hidden" name="waydescription5" value="###WAYDESCRIPTION5###" />
+				  				<input type="hidden" name="waydescription6" value="###WAYDESCRIPTION6###" />
+				  				<input type="hidden" name="waydescription7" value="###WAYDESCRIPTION7###" />
+								<!-- copyright -->
+				  				<input type="hidden" name="copyright" value="###COPYRIGHT###" />
+				  				
+					  			<input type="submit" value="&Auml;ndern"/>
+					  		</form>
+					  	</div>
+					  	
+<!-- ###EDIT_FORM### end -->
+
+<!--###TEMPLATE_DEFAULT### end -->
+

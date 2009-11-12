@@ -1,0 +1,33 @@
+CREATE TABLE tabelle_neu SELECT * FROM t3_quickstart.tx_mmhutinfo_type WHERE 1=0;
+
+show columns from tabelle_neu
+
+INSERT INTO tabelle_neu(
+uid,              
+pid,              
+tstamp,           
+crdate,            
+cruser_id,         
+sys_language_uid, 
+l18n_parent,       
+l18n_diffsource,  
+deleted,          
+hidden,           
+name,             
+description
+) SELECT 
+uid,              
+pid,              
+tstamp,           
+crdate,            
+cruser_id,         
+sys_language_uid, 
+l18n_parent,       
+l18n_diffsource,  
+deleted,          
+hidden,           
+name,             
+description 
+FROM t3_quickstart.tx_mmhutinfo_type
+
+

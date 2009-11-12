@@ -1,0 +1,271 @@
+.tx-mmhutinfo-pi1 .hut_list {
+	margin: 0 0.5em 0.5em 0.5em;
+	border: 1px solid #6B7178;
+	border-right: 1px solid #393C40;
+	border-bottom: 1px solid #393C40;
+	width: 95%;
+	}
+
+.tx-mmhutinfo-pi1 .subheadline div,	
+.hut_list .label, 
+.tx-mmhutinfo-pi1 .label {
+	color: #767575;
+	}
+	
+.hut_list .label, 
+.tx-mmhutinfo-pi1 .label {
+	font-weight: bold;
+	padding-right: 1em;
+	}	
+
+.tx-mmhutinfo-pi1 .detail_container td {
+	text-align: left;
+	vertical-align: top;
+	}
+	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-value {
+	padding-bottom: 1em;
+	}	
+	
+.tx-mmhutinfo-pi1 .hut_list .tx-mmhutinfo-pi1-preview {
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	width: 100px;
+	vertical-align: top;
+	}
+		
+.tx-mmhutinfo-pi1 .hut_list .description_container {
+	padding: 0.5em 0.5em 0.5em 0;
+	}	
+	
+.tx-mmhutinfo-pi1 .hut_list .detail_container	{
+	padding: 0.5em 0;
+	}
+	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-name {
+	padding-bottom: 0;
+	color: 	#2B5500;
+	font-weight: bold;
+	}
+		
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-name a {
+	text-decoration: none;
+	}
+		
+.tx-mmhutinfo-pi1 .description .tx-mmhutinfo-pi1-image,
+.tx-mmhutinfo-pi1 .description .tx-mmhutinfo-pi1-image2 span,
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-imageway span {
+	float: left;
+	padding-right: 1em;
+	}	
+	
+.tx-mmhutinfo-pi1 .description .tx-mmhutinfo-pi1-image img,
+.tx-mmhutinfo-pi1 .description .tx-mmhutinfo-pi1-image2 img,
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-area_image img,
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-touristregimage img,
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-provinceimage img,	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-imageway img {
+	border: 0;
+	}	
+	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-description,	
+.tx-mmhutinfo-pi1 .description .tx-mmhutinfo-pi1-image2 {
+	clear: both;
+	}
+	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-label_description {
+	clear:both;
+	padding-top: 1em;
+	}
+	
+.tx-mmhutinfo-pi1 .area_province .province	{
+	padding-bottom: 0;
+	}
+	
+
+.tx-mmhutinfo-pi1 .contact_hut,
+.tx-mmhutinfo-pi1 .contact_owner {
+	text-align: left;
+	vertical-align: top;
+	width: 250px;
+	}
+	
+.tx-mmhutinfo-pi1 .copyrightcontainer {
+	font-size: 0.8em;
+	}		
+	
+.tx-mmhutinfo-pi1 div.copyrightcontainer {
+	padding-top: 1em;
+	}	
+
+.tx-mmhutinfo-pi1 .area_image,
+.tx-mmhutinfo-pi1 .hut_guide .hg_preview,
+.tx-mmhutinfo-pi1 .tourist_region .touristregimage,
+.tx-mmhutinfo-pi1 .area_province .provinceimage {
+	float: left;
+	padding-right: 1em;
+	}
+	
+.tx-mmhutinfo-pi1 .area_desc .bodytext,
+.tx-mmhutinfo-pi1 .area_province .bodytext {
+	padding: 0;
+	margin: 0;
+	}	
+	
+.tx-mmhutinfo-pi1 .area_province,
+.tx-mmhutinfo-pi1 .tourist_region {
+	clear: both;
+	padding-top: 1em;
+	}		
+	
+.tx-mmhutinfo-pi1 .hut_guide .hg_name {
+	padding-bottom: 0;
+	}
+	
+.tx-mmhutinfo-pi1 .browseBoxWrap {
+	text-align: center;
+	}	
+	
+.tx-mmhutinfo-pi1 .way1,
+.tx-mmhutinfo-pi1 .way2,
+.tx-mmhutinfo-pi1 .way3,
+.tx-mmhutinfo-pi1 .way4,
+.tx-mmhutinfo-pi1 .way5,
+.tx-mmhutinfo-pi1 .way6,
+.tx-mmhutinfo-pi1 .way7 {
+	padding-bottom: 1em;
+	}
+	
+.tx-mmhutinfo-pi1 .way1 .details {
+	padding-top: 0;
+	padding-left: 2em;
+	}	
+	
+.tx-mmhutinfo-pi1 .way1 .details .label {
+	padding: 0.5em 0 0 0;
+	}	
+
+.tx-mmhutinfo-pi1 .way1 .details .tx-mmhutinfo-pi1-value {
+	padding: 0;
+	}
+
+.tx-mmhutinfo-pi1 .subheadline,
+.tx-mmhutinfo-pi1 .subheadline div,
+.tx-mmhutinfo-pi1 h2.subheadline {
+	margin-top: 0px;
+	padding-top: 0px;
+	}
+	
+.tx-mmhutinfo-pi1 .subheadline div {
+	display: inline;
+	font-size: 17px;
+	}
+	
+.tx-mmhutinfo-pi1 h1.csc-firstHeader {
+	margin-bottom: 0px;
+	}	
+	
+/*
+<img src="/typo3conf/ext/mm_hutinfo/pi1/res/images/icon_kueche.gif" alt="Kueche" title="Kueche"/>
+*/	
+.tx-mmhutinfo-pi1 .infoblock {
+	background-position: top left;
+	background-repeat: no-repeat;
+	}	
+	
+.tx-mmhutinfo-pi1 .karte {
+	padding-bottom: 1em;
+	}
+		
+.tx-mmhutinfo-pi1 .kueche {
+	background-image: url(../images/icon_kueche.gif);
+	}
+
+.tx-mmhutinfo-pi1 .offen {
+	background-image: url(../images/icon_offen.gif);
+	}
+
+.tx-mmhutinfo-pi1 .bettenicon {
+	background-image: url(../images/icon_betten.gif);
+	}
+
+.tx-mmhutinfo-pi1 .telefon1 {
+	background-image: url(../images/icon_telefon.gif);
+	}
+
+.tx-mmhutinfo-pi1 .mehrkontakt {
+	background-image: url(../images/icon_brief.gif);
+	}
+	
+.tx-mmhutinfo-pi1 .way1 {
+	background-image: url(../images/icon_way1.gif);
+	}
+
+.tx-mmhutinfo-pi1 .way2 {
+	background-image: url(../images/icon_way2.gif);
+	}
+
+.tx-mmhutinfo-pi1 .way3 {
+	background-image: url(../images/icon_way3.gif);
+	}
+
+.tx-mmhutinfo-pi1 .way4 {
+	background-image: url(../images/icon_way4.gif);
+	}
+
+.tx-mmhutinfo-pi1 .karte {
+	background-image: url(../images/icon_windrose.gif);
+	}
+
+.tx-mmhutinfo-pi1 .infoblock div {
+	padding-left: 25px;
+	}
+
+.tx-mmhutinfo-pi1 div.infoblock {
+	padding-bottom: 1em;
+	}
+
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-person,
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-hcity {
+	padding-bottom: 0;
+	}
+	
+.tx-mmhutinfo-pi1 .contact_owner {
+	border-left: 1px solid #B3B2B2;
+	padding-left: 1em;
+	}
+	
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-number {
+	border: 1px solid #2B5500;
+	color: #ffffff;
+	height: 19px;
+	font-size: 13px;
+	padding: 2px 4px 2px 4px;
+	}	
+	
+.tx-mmhutinfo-pi1 .infoblock .tx-mmhutinfo-pi1-hg_name {
+	font-weight: bold;
+	}	
+	
+
+.tx-mmhutinfo-pi1 .changerecord {
+	padding-top: 1em;
+	}	
+
+.tx-mmhutinfo-pi1 .changerecord input {
+	width: 100px;
+	}
+
+.tx-mmhutinfo-pi1 .tx-mmhutinfo-pi1-image2 img {
+	padding-right: 1em;
+	padding-bottom: 1em;
+	}
+/*	
+.tx-mmhutinfo-pi1  .google_maps #map {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/		
+/*description_container*/	
+
+

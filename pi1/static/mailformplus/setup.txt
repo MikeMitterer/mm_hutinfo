@@ -1,0 +1,146 @@
+plugin.tx_thmailformplus_pi1.email_htmltemplate=typo3conf/ext/mm_hutinfo/pi1/res/mailformplus/form_edit.html
+plugin.tx_thmailformplus_pi1.langFile = typo3conf/ext/mm_hutinfo/pi1/res/mailformplus/translation.php
+
+//plugin.tx_thmailformplus_pi1.debug = 1
+
+plugin.tx_thmailformplus_pi1.saveDB = 1
+plugin.tx_thmailformplus_pi1.saveDB {
+    // changed by Mike
+    updateInsteadOfInsert = 1
+    checkShortMD5 = 1
+    checkAuth = 1
+	checkAuth.GPname = md5
+    
+    // Fileupload
+    fileUpload = uploads/tx_mmhutinfo/
+    fileTypes = jpg,gif
+    fileSize = 5000000
+    
+    dbTable = tx_mmhutinfo_hut
+	
+    # change .96. to an existing page-ID in your TYPO3 project
+    # ATTENTION - check your pid!!!! 
+    dbinsert=pid:66,hidden:0
+
+    # if dbkey is not set: "uid" is taken
+    dbkey =uid
+
+    fields.uid.mapping = uid
+    fields.description.mapping = description
+	fields.opendesc.mapping = opendesc
+	fields.hcity.mapping = hcity
+	fields.height.mapping = height
+	fields.bedsdesc.mapping = bedsdesc
+	fields.kitchen_description.mapping = kitchen_description
+	fields.person.mapping = person
+	fields.tel1.mapping = tel1
+	fields.fax1.mapping = fax1
+	fields.mobile1.mapping = mobile1
+	fields.email1.mapping = email1
+	fields.web.mapping = web
+	fields.company.mapping = company
+	fields.tel2.mapping = tel2
+	fields.tel3.mapping = tel3
+	fields.fax2.mapping = fax2
+	fields.mobile2.mapping = mobile2
+	fields.email2.mapping = email2
+	fields.street.mapping = street
+	fields.areacode.mapping = areacode
+	fields.city.mapping = city
+	fields.image.mapping = image
+	fields.waydescription.mapping = waydescription
+	fields.waydescription2.mapping = waydescription2
+	fields.waydescription3.mapping = waydescription3
+	fields.waydescription4.mapping = waydescription4
+	fields.waydescription5.mapping = waydescription5
+	fields.waydescription6.mapping = waydescription6
+	fields.waydescription7.mapping = waydescription7
+	fields.copyright.mapping = copyright
+    
+    // Inserted by Mike (upload)
+    dbimagefields = image
+    
+    // changed by Mike
+	//fields.description.postProcessing = HTML
+	//fields.description.postProcessing.value.stripHtml = 1
+	//fields.description.postProcessing.value.br = 1
+	
+	fields.description.preProcessing = HTML
+	fields.description.preProcessing.value = {GPvar:description}
+	fields.description.preProcessing.value.stdWrap.insertData = 1
+	fields.description.preProcessing.value.stripHtml = 1
+	fields.description.preProcessing.value.br = 1 
+	
+	fields.waydescription.preProcessing < fields.description.preProcessing
+	fields.waydescription.preProcessing.value = {GPvar:waydescription}
+	
+	fields.waydescription2.preProcessing < fields.description.preProcessing
+	fields.waydescription2.preProcessing.value = {GPvar:waydescription2}
+	
+	fields.waydescription3.preProcessing < fields.description.preProcessing
+	fields.waydescription3.preProcessing.value = {GPvar:waydescription3}
+
+	fields.waydescription4.preProcessing < fields.description.preProcessing
+	fields.waydescription4.preProcessing.value = {GPvar:waydescription4}
+
+	fields.waydescription5.preProcessing < fields.description.preProcessing
+	fields.waydescription5.preProcessing.value = {GPvar:waydescription5}
+
+	fields.waydescription6.preProcessing < fields.description.preProcessing
+	fields.waydescription6.preProcessing.value = {GPvar:waydescription6}
+
+	fields.waydescription7.preProcessing < fields.description.preProcessing
+	fields.waydescription7.preProcessing.value = {GPvar:waydescription7}
+
+	fields.copyright.preProcessing < fields.description.preProcessing
+	fields.copyright.preProcessing.value = {GPvar:copyright}
+			
+
+    # [inputFieldName]:[DBName]
+    #mapping=name:header,subject:bodytext,photo:image,photo2:image
+
+    # translate form field checkbox arrays to TYPO3 Backend checkbox arrays
+    #powMapping.[db-fieldname].[form-inputname] = [int]
+
+    # crop string (e.g. form a textarea) to int number of chars
+    #cropTextArea.[db-fieldname] = [int]
+
+    # enable special mappings
+    #specialMapping = 1
+    specialMapping {
+
+        # store submission datetime in format YYYY-MM-DD HH:SS
+        sub_datetime = [fieldname]
+
+        # set timestamp (submission time) to field crdate
+        crdate = 1
+
+        # store submission IP to field
+        logIP = [fieldname]
+
+        # store uid to a second field (reference).
+        # Enables storage in CSV as well and
+        # activates marker ###DB_UID### in E-Mails
+        storeuid = [fieldname]
+    }
+}
+
+plugin.tx_thmailformplus_pi1.fieldConf {
+	  image2 {
+	    numberOfAllowedFiles = 1
+	    fileTypes = jpg,gif
+	    fileSize = 5000000
+	    fileUpload = uploads/tx_hutinfo/
+	    errorText = <li>Bilder nicht korrekt ausgef&uuml;t</li><br/>
+	    uploadedFiles {
+	      template = ###fileName### ###fileSize######linkDelete_start###l�schen###linkDelete_stop###<br/>
+	      wrap = <div>|</div>
+	    }
+	    uploadedFiles.mail {
+	        plainTemplate = ###filePath######fileName###
+	        HTMLTemplate = <a href="###filePath######fileName###">###fileName###</a><br/>
+	        plainWrap = File start:|file end
+	        HTMLWrap = File start:|<br/>file end<br/>
+	    }
+	  }
+	}

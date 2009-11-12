@@ -1,0 +1,101 @@
+#Test über SQL-Statements
+select 
+    uid,
+    name,
+	concat(substr(replace(replace(concat(
+        replace(replace(replace(replace(lcase(tx_mmhutinfo_hut.name),'ä','a'),'ü','u'),'ö','o'),' ','_'),
+        'abcdefg'),';',''),'&',''),1,7),tx_mmhutinfo_hut.uid),
+    lcase(substr(md5(concat(lcase(substr(replace(replace(name,';',''),'&',''),1,7)),uid)),1,8)) as password,
+    cast(substr(concat(lcase(substr(replace(replace(concat(name,'abcdefg'),';',''),'&',''),1,7)),uid),8,4) as signed) as realuid
+from 
+    tx_mmhutinfo_hut;
+
+#Herausfinden der PID von fe_users und fe_groups
+select pid from fe_users group by pid;
+select pid from fe_users group by pid;
+
+#Anzeigen aller groups bzw. users
+select uid,title from fe_groups order by uid limit 1,10;
+select uid,username from fe_users order by uid limit 1,10;
+
+#Alle User und Gruppen löschen
+delete from fe_groups where uid > 0;
+delete from fe_users where uid > 0;
+
+#Gruppen einfügen
+insert into fe_groups 
+    (pid,tstamp,
+    title,
+    hidden,deleted,description,tsconfig)
+select 
+    153,1138978239,
+	concat(substr(replace(replace(concat(
+        replace(replace(replace(replace(lcase(tx_mmhutinfo_hut.name),'ä','a'),'ü','u'),'ö','o'),' ','_'),
+        'abcdefg'),';',''),'&',''),1,7),tx_mmhutinfo_hut.uid),
+    0,0,tx_mmhutinfo_hut.name,'' 
+from tx_mmhutinfo_hut;
+
+#User einfügen
+insert into fe_users 
+    (pid,tstamp,
+    username,
+    password,
+    name,
+    email,
+    TSconfig,usergroup,address,uc,image)
+select 
+    153,1119987690,
+    concat(substr(replace(replace(concat(
+        replace(replace(replace(replace(lcase(tx_mmhutinfo_hut.name),'ä','a'),'ü','u'),'ö','o'),' ','_'),
+        'abcdefg'),';',''),'&',''),1,7),tx_mmhutinfo_hut.uid),
+    lcase(substr(md5(concat(lcase(substr(replace(replace(name,';',''),'&',''),1,7)),uid)),1,8)),
+    tx_mmhutinfo_hut.name,
+    tx_mmhutinfo_hut.email1,
+    '',0,'','','' 
+from tx_mmhutinfo_hut;
+
+#Bei den Gruppen die User eintragen
+update fe_users,fe_groups 
+set fe_users.usergroup=fe_groups.uid 
+where fe_groups.title=fe_users.username;
+
+#Alte Berechtigung bei den Hütten eliminieren
+update tx_mmhutinfo_hut
+set tx_mmhutinfo_hut.fe_group=0;
+
+#Bei Gruppen bei den Hütten eintragen
+update tx_mmhutinfo_hut,fe_groups 
+set tx_mmhutinfo_hut.fe_group=fe_groups.uid 
+where fe_groups.title=
+    concat(substr(replace(replace(concat(
+        replace(replace(replace(replace(lcase(tx_mmhutinfo_hut.name),'ä','a'),'ü','u'),'ö','o'),' ','_'),
+        'abcdefg'),';',''),'&',''),1,7),tx_mmhutinfo_hut.uid);
+
+#Alle fe_users finden bei denen der Username nicht OK ist
+select uid,pid,username,name,password from fe_users where
+	ascii(substr(username,1,1)) > 127 OR
+	ascii(substr(username,2,1)) > 127 OR 
+	ascii(substr(username,3,1)) > 127 OR
+	ascii(substr(username,4,1)) > 127 OR
+	ascii(substr(username,5,1)) > 127 OR 
+	ascii(substr(username,6,1)) > 127 OR
+	ascii(substr(username,7,1)) > 127 OR
+	ascii(substr(username,8,1)) > 127 OR 
+	ascii(substr(username,9,1)) > 127 OR
+	ascii(substr(username,10,1)) > 127 OR
+	INSTR(username,' ') > 0 OR
+	INSTR(username,'.') > 0
+	INTO OUTFILE "/tmp/outfile_check.txt";;
+	
+#Alle User anzeigen (mit eMail)	
+ select uid,pid,username,name,password,email from fe_users where username like '%anger%' order by name;
+ select uid,pid,username,name,password,email from fe_users order by name INTO OUTFILE "/tmp/outfile.txt";
+ 
+#In File exportieren
+	...INTO OUTFILE "/tmp/outfile.txt"; 
+
+
+
+
+
+

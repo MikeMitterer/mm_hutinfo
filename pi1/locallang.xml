@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>modul</type>
+		<fileId>EXT:mm_hutinfo/pi/locallang.xml</fileId>
+		<description>Language labels for plugin &quot;tx_mmhutinfo_pi1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="listFieldHeader_name">Name1</label>
+			<label index="listFieldHeader_description">Description</label>
+			<label index="listFieldHeader_type_uid">Type of business</label>
+			<label index="listFieldHeader_property_uid">Property</label>
+			<label index="listFieldHeader_map_uid">External-Map</label>
+			<label index="listFieldHeader_hutguide_uid">Hut-Guide</label>
+			<label index="listFieldHeader_company">Company name</label>
+			<label index="listFieldHeader_person">Person</label>
+			<label index="listFieldHeader_tel1">Telephone</label>
+			<label index="listFieldHeader_fax">Fax</label>
+			<label index="listFieldHeader_mobile">Mobile</label>
+			<label index="listFieldHeader_street">Street</label>
+			<label index="listFieldHeader_city">City</label>
+			<label index="listFieldHeader_province_uid">Province</label>
+			<label index="listFieldHeader_area_uid">Area</label>
+			<label index="listFieldHeader_google_longitude">Longitude</label>
+			<label index="listFieldHeader_google_latitude">Latitude</label>
+			<label index="listFieldHeader_google_description">Google-Description</label>
+			<label index="listFieldHeader_kitchen_description">Kitchen</label>
+			<label index="listFieldHeader_height">Height</label>
+			<label index="listFieldHeader_open">Open</label>
+			<label index="listFieldHeader_beds">Number of beds</label>
+			<label index="listFieldHeader_camp">Beds in camp</label>
+			<label index="listFieldHeader_waydescription">Walkwaydescription</label>
+			<label index="listFieldHeader_difficulty">Difficulty</label>
+			<label index="listFieldHeader_walkingtime_min">Walkingtime in minutes</label>
+			<label index="listFieldHeader_length_km">Length in km</label>
+			<label index="listFieldHeader_altitude">Altitude difference</label>
+			<label index="listFieldHeader_free1">Free 1</label>
+			<label index="listFieldHeader_free2">Free 2</label>
+			<label index="listFieldHeader_free3">Free 3</label>
+			<label index="listFieldHeader_copyright">Copyright images</label>
+			<label index="listFieldHeader_readyforprint">Ready for print</label>
+			<label index="list_mode_1">Mode 1</label>
+			<label index="list_mode_2">Mode 2</label>
+			<label index="list_mode_3">Mode 3</label>
+			<label index="back">Back</label>
+			<label index="pi_list_browseresults_prev">&lt; Previous</label>
+			<label index="pi_list_browseresults_page"></label>
+			<label index="pi_list_browseresults_next">Next &gt;</label>
+			<label index="pi_list_browseresults_displays">###FROM### to ###TO### out of ###OUT_OF###</label>
+			<label index="pi_list_searchBox_search">Search</label>
+			<label index="huttype">Type of business</label>
+			<label index="province">Province</label>
+			<label index="country">Country</label>
+			<label index="difficultytext">Difficulty</label>
+			<label index="area">Area</label>
+			<label index="hg_name">Hut-Guide</label>
+			<label index="hg_link">Download</label>
+			<label index="firstcomboentry">- choose -</label>
+			<label index="touristregion">Tourismregion</label>
+			<label index="label.combo.hutguide">Hutguide</label>
+			<label index="label.combo.area">Area</label>
+			<label index="label.combo.region">Tourismregion</label>
+			<label index="label.combo.type">Type of business</label>		
+			<label index="label.combo.province">Province</label>
+			<label index="panorama">Panoramamap</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="listFieldHeader_name">Name</label>
+			<label index="listFieldHeader_description">Beschreibung</label>
+			<label index="listFieldHeader_type_uid">Betriebsart</label>
+			<label index="listFieldHeader_property_uid">Eingenschaften</label>
+			<label index="listFieldHeader_map_uid">Externe Karte</label>
+			<label index="listFieldHeader_hutguide_uid">Hüttenführer</label>
+			<label index="listFieldHeader_company">Firma</label>
+			<label index="listFieldHeader_person">Person</label>
+			<label index="listFieldHeader_tel1">Telefon</label>
+			<label index="listFieldHeader_fax">Fax</label>
+			<label index="listFieldHeader_mobile">Handy</label>
+			<label index="listFieldHeader_street">Straße</label>
+			<label index="listFieldHeader_city">Ort</label>
+			<label index="listFieldHeader_province_uid">Bundesland</label>
+			<label index="listFieldHeader_area_uid">Gebiet</label>
+			<label index="listFieldHeader_google_longitude">Longitude</label>
+			<label index="listFieldHeader_google_latitude">Latitude</label>
+			<label index="listFieldHeader_google_description">Google-Beschreibung</label>
+			<label index="listFieldHeader_kitchen_description">K&#252;che</label>
+			<label index="listFieldHeader_height">H&#214;he</label>
+			<label index="listFieldHeader_open">Offen</label>
+			<label index="listFieldHeader_beds">Anzahl der Betten</label>
+			<label index="listFieldHeader_camp">Betten im Lager</label>
+			<label index="listFieldHeader_waydescription">Wegbeschreibung</label>
+			<label index="listFieldHeader_difficulty">Schwierigkeit</label>
+			<label index="listFieldHeader_walkingtime_min">Gehzeit in min</label>
+			<label index="listFieldHeader_length_km">Länge in km</label>
+			<label index="listFieldHeader_altitude">Höhendifferenz</label>
+			<label index="listFieldHeader_free1">Freifeld 1</label>
+			<label index="listFieldHeader_free2">Freifeld 2</label>
+			<label index="listFieldHeader_free3">Freifeld 3</label>
+			<label index="listFieldHeader_copyright">Copyright</label>
+			<label index="listFieldHeader_readyforprint">Druckfreigabe</label>
+			<label index="list_mode_1">Mode 1</label>
+			<label index="list_mode_2">Mode 2</label>
+			<label index="list_mode_3">Mode 3</label>
+			<label index="back">Zurück</label>
+			<label index="pi_list_browseresults_prev">&lt; Vorher</label>
+			<label index="pi_list_browseresults_page"></label>
+			<label index="pi_list_browseresults_next">Weiter &gt;</label>
+			<label index="pi_list_browseresults_displays">###FROM### bis ###TO### von ###OUT_OF###</label>
+			<label index="pi_list_searchBox_search">Durchsuchen</label>
+			<label index="huttype">Betriebsart</label>
+			<label index="province">Bundesland</label>
+			<label index="country">Land</label>
+			<label index="difficultytext">Schwierigkeit</label>
+			<label index="area">Gebirgszug</label>
+			<label index="hg_name">H&#252;ttenf&#252;hrer</label>
+			<label index="hg_link">Download</label>
+			<label index="firstcomboentry">- bitte auswählen -</label>
+			<label index="touristregion">Tourismusregion</label>
+			<label index="label.combo.hutguide">H&#252;ttenf&#252;hrer</label>
+			<label index="label.combo.area">Gebirgszug</label>
+			<label index="label.combo.region">Tourismusregion</label>
+			<label index="label.combo.type">Betriebsart</label>		
+			<label index="label.combo.province">Bundesland</label>
+			<label index="panorama">Übersichtskarte</label>
+		</languageKey>		
+	</data>
+</T3locallang>

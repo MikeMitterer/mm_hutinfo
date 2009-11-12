@@ -1,0 +1,255 @@
+<-- ###TEMPLATE_FORM### begin -->
+<div class="mailformplus-edithutinfo">
+###ERROR###
+<form name="contact_form" method="post" action="###REL_URL###" enctype="multipart/form-data">
+	<legend>###LLL:legend###</legend>
+	<input type="hidden" name="id" value="###PID###" />
+	<input type="hidden" name="submitted" value="1" />
+	<input type="hidden" name="L" value="###value_L###" />
+	<input type="hidden" name="type" value="###value_type###" />
+	<input type="hidden" name="uid" value="###value_uid###" />
+	<input type="hidden" name="md5" value="###value_md5###" />
+	<input type="hidden" name="name" value="###value_name###" />
+
+	<fieldset>
+		<LEGEND>Basisdaten</LEGEND>
+		<div class="formline">
+			<label for="text">###LLL:description###</label>
+			<textarea cols="40" rows="5" name="description" id="description">###value_description###</textarea>
+			###required_description###
+		</div>
+		
+		<div class="formline">
+			<label for="opendesc">###LLL:opendesc###</label>
+			<input name="opendesc" value="###value_opendesc###"  type="text" id="opendesc" >###required_opendesc###
+		</div>
+		
+		<div class="formline">
+			<label for="hcity">###LLL:hcity###</label>
+			<input name="hcity" value="###value_hcity###"  type="text" id="hcity" >###required_hcity###
+		</div>
+
+		<div class="formline">
+			<label for="height">###LLL:height###</label>
+			<input name="height" value="###value_height###"  type="text" id="height" >###required_height###
+		</div>
+
+		<div class="formline">
+			<label for="bedsdesc">###LLL:bedsdesc###</label>
+			<input name="bedsdesc" value="###value_bedsdesc###"  type="text" id="height" >###required_bedsdesc###
+		</div>
+
+		<div class="formline">
+			<label for="kitchen_description">###LLL:kitchen_description###</label>
+			<textarea cols="45" rows="5" name="kitchen_description" id="kitchen_description">###value_kitchen_description###</textarea>
+			###required_kitchen_description###
+		</div>
+
+		<div class="formline">
+			<label for="image">###LLL:image###</label>
+			<input type="file" name="image" id="image" size="20" maxlength="50000" accept="image" tabindex="9"/>
+			<div class="currentimage">(###value_pureimage###)</div>
+			###required_image###
+		</div>
+		 
+		<div class="formline">
+			<label for="copyright">###LLL:copyright###</label>
+			<textarea cols="40" rows="5" name="copyright" id="copyright">###value_copyright###</textarea>
+			###required_copyright###
+		</div>
+		
+	</fieldset>
+
+	<fieldset>
+		<LEGEND>H&uuml;tte</LEGEND>
+		<div class="formline">
+			<label for="person">###LLL:person###</label>
+			<input name="person" value="###value_person###"  type="text" id="person" >###required_person###
+		</div>
+		
+		<div class="formline">
+			<label for="tel1">###LLL:tel1###</label>
+			<input name="tel1" value="###value_tel1###"  type="text" id="tel1" >###required_tel1###
+		</div>
+		
+		<div class="formline">
+			<label for="fax1">###LLL:fax1###</label>
+			<input name="fax1" value="###value_fax1###"  type="text" id="fax1" >###required_fax1###
+		</div>
+		
+		<div class="formline">
+			<label for="mobile1">###LLL:mobile1###</label>
+			<input name="mobile1" value="###value_mobile1###"  type="text" id="mobile1" >###required_mobile1###
+		</div>
+
+		<div class="formline">
+			<label for="email1">###LLL:email1###</label>
+			<input name="email1" value="###value_email1###"  type="text" id="email1" >###required_email1###
+		</div>
+		
+		<div class="formline">
+			<label for="web">###LLL:web###</label>
+			<input name="web" value="###value_web###"  type="text" id="web" >###required_web###
+		</div>
+	</fieldset>
+	
+	<fieldset>
+		<LEGEND>Tal</LEGEND>
+		<div class="formline">
+			<label for="company">###LLL:company###</label>
+			<input name="company" value="###value_company###"  type="text" id="company" >###required_company###
+		</div>
+		
+		<div class="formline">
+			<label for="tel2">###LLL:tel2###</label>
+			<input name="tel2" value="###value_tel2###"  type="text" id="tel2" >###required_tel2###
+		</div>
+		
+		<div class="formline">
+			<label for="tel3">###LLL:tel3###</label>
+			<input name="tel3" value="###value_tel3###"  type="text" id="???" >###required_tel3###
+		</div>
+		
+		<div class="formline">
+			<label for="fax2">###LLL:fax2###</label>
+			<input name="fax2" value="###value_fax2###"  type="text" id="fax2" >###required_fax2###
+		</div>
+
+		<div class="formline">
+			<label for="mobile2">###LLL:mobile2###</label>
+			<input name="mobile2" value="###value_mobile2###"  type="text" id="mobile2" >###required_mobile2###
+		</div>
+
+		<div class="formline">
+			<label for="email2">###LLL:email2###</label>
+			<input name="email2" value="###value_email2###"  type="text" id="email2" >###required_email2###
+		</div>
+
+		<div class="formline">
+			<label for="street">###LLL:street###</label>
+			<input name="street" value="###value_street###"  type="text" id="street" >###required_street###
+		</div>
+
+		<div class="formline">
+			<label for="areacode">###LLL:areacode###</label>
+			<input name="areacode" value="###value_areacode###"  type="text" id="areacode" >###required_areacode###
+		</div>
+
+		<div class="formline">
+			<label for="city">###LLL:city###</label>
+			<input name="city" value="###value_city###"  type="text" id="city" >###required_city###
+		</div>
+
+	</fieldset>
+	<fieldset>
+		<LEGEND>Wegbeschreibung</LEGEND>
+	
+		<div class="formline">
+			<label for="waydescription">###LLL:waydescription###</label>
+			<textarea cols="40" rows="5" name="waydescription" id="waydescription">###value_waydescription###</textarea>
+			###required_waydescription###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription2">###LLL:waydescription2###</label>
+			<textarea cols="40" rows="5" name="waydescription2" id="waydescription2">###value_waydescription2###</textarea>
+			###required_waydescription2###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription3">###LLL:waydescription3###</label>
+			<textarea cols="40" rows="5" name="waydescription3" id="waydescription3">###value_waydescription3###</textarea>
+			###required_waydescription3###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription4">###LLL:waydescription4###</label>
+			<textarea cols="40" rows="5" name="waydescription4" id="waydescription4">###value_waydescription4###</textarea>
+			###required_waydescription4###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription5">###LLL:waydescription5###</label>
+			<textarea cols="40" rows="5" name="waydescription5" id="waydescription5">###value_waydescription5###</textarea>
+			###required_waydescription5###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription6">###LLL:waydescription6###</label>
+			<textarea cols="40" rows="5" name="waydescription6" id="waydescription6">###value_waydescription6###</textarea>
+			###required_waydescription6###
+		</div>
+
+		<div class="formline">
+			<label for="waydescription7">###LLL:waydescription7###</label>
+			<textarea cols="40" rows="5" name="waydescription7" id="waydescription7">###value_waydescription7###</textarea>
+			###required_waydescription7###
+		</div>
+	</fieldset>
+	<input type="submit" value="###LLL:submit###"/>
+	
+</form>
+</div>
+<!-- ###TEMPLATE_FORM### end -->
+
+<!-- ###TEMPLATE_SUBMITTED_OK### begin
+  OPTIONAL - will be shown if form was submitted and all required fields were filled out
+-->
+###LLL:thank_you###
+
+<!-- ###TEMPLATE_SUBMITTED_OK### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_USER### begin
+    OPTIONAL - this will be the email text that is sent to the user (plaintext!)
+-->
+Hello ###name### (plain),
+You have just filled out the form and asked about: ###subject###
+
+We will contact you as soon as possible,
+ciao!
+<!-- ###TEMPLATE_EMAIL_USER### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_USER_HTML### begin
+    OPTIONAL - this will be the email text that is sent to the user (html!)
+-->
+Hello ###name### (html),<br/>
+You have just filled out the form and asked about: ###subject###<br/>
+We will contact you as soon as possible,<br/>
+ciao!
+<!-- ###TEMPLATE_EMAIL_USER_HTML### end -->
+
+
+
+
+
+<!-- ###TEMPLATE_EMAIL_RECEIVER### begin
+    OPTIONAL - this will be the email text that is sent to the admin (html!)
+    (admin-email = the email you can specify in the mailformplus plugin)
+-->
+Hallo admin,
+Ein user hat soeben die Hütte geändert:
+Hüttenname: ###value_name###
+<!-- ###TEMPLATE_EMAIL_RECEIVER### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_RECEIVER_HTML### begin
+    OPTIONAL - this will be the email text that is sent to the admin (plaintext!)
+    (admin-email = the email you can specify in the mailformplus plugin)
+-->
+Hallo admin,<br/>
+Ein user hat soeben die Hütte geändert:<br/>
+Hüttenname: ###value_name###<br/>
+<!-- ###TEMPLATE_EMAIL_RECEIVER_HTML### end -->
+
+
+
+
+<!-- ###TEMPLATE_ERROR### begin -->
+<!-- ###ERROR_START### begin 
+this is used for the global error marker ###ERROR### -->
+The following errors occured:<br/>
+<!-- ###ERROR_START### end -->
+
+<!-- ###TEMPLATE_ERROR### end -->

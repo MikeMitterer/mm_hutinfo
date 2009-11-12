@@ -1,0 +1,444 @@
+plugin.tx_mmhutinfo_pi1 {
+	// Allows Caching for this plugin
+	allowCaching = 1
+	allowCachingIfUserIsLoggedIn = 0
+	
+	// It is important to use the tablename AND the fieldname
+	// Othwerwise such fields like keywords could make problems!
+	searchFieldList = tx_mmhutinfo_hut.name, tx_mmhutinfo_hut.description,tx_mmhutinfo_area.name,tx_mmhutinfo_province.name
+	//tx_mmhutinfo_area,tx_mmhutinfo_province
+	
+	// Important!!! - the fieldnames used above must bin in the orderByList tool
+	orderByList = tx_mmhutinfo_hut.name
+	
+	// Ordering can be set like this too (field must be in orderByList)
+	order = tx_mmhutinfo_hut.name:0
+	//order = date_mod:1
+	
+	CMD =
+	pidList = {$plugin.tx_mmhutinfo_pi1.pidList}
+	//pidList = 
+	recursive =
+	
+	// Jump to this page to show the single-View
+	singlePid = 0
+	}
+
+plugin.tx_mmhutinfo_pi1 {
+	#JSOnLoadFunction = tabberAutomaticOnLoad();
+	JSOnLoadFunction.1 = tabberAutomatic();
+	}
+	
+// JS an CSS Settings
+plugin.tx_mmhutinfo_pi1 {
+	#JSOnLoadFunction.1 = onLoadKENTBREW();
+	
+	additionalHeaderData.1 = pi1/res/css/hutinfo.css
+	additionalHeaderData.2 = pi1/res/javascript/tabber.js
+	additionalHeaderData.3 = pi1/res/css/tabber.css
+	#additionalHeaderData.3 = pi1/res/css/buttons.css
+	}
+	
+plugin.tx_mmhutinfo_pi1.listView {
+	results_at_a_time = 10
+	maxPages =
+	colsOnPage = 1
+	showSearchBox = 1
+	showModeSelector = 0
+	showBrowserResults = 1
+	showHeader = 0
+	dontLinkActivePage = 1
+	showFirstLast = 0
+	pagefloat = CENTER
+	
+	// Baspath is the extensions /pi1/res/ folder
+	templateFile = list_view.html
+	
+	// Avoids to put a table tag around the Template-Content
+	avoidTableTagAroundContent = 1
+	
+	showBrowserResults = 1
+}
+
+plugin.tx_mmhutinfo_pi1.singleView {
+	templateFile = single_view.html
+}
+
+//------------------------------------------------------------------------------
+// Sample for inserting the menu into your page:
+
+//
+plugin.tx_mmhutinfo_pi1.comboblock = COA
+
+plugin.tx_mmhutinfo_pi1.comboblock.10 = USER
+plugin.tx_mmhutinfo_pi1.comboblock.10 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_hutguide
+	localconf.fieldname			= name
+	localconf.filterfield		= hutguide_uid
+	//localconf.elementtype		= list
+	localconf.elementtype		= combo	
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	localconf.targetpageid		= {$plugin.tx_mmhutinfo_pi1.combo.targetpid}
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.hutguide
+	}
+
+plugin.tx_mmhutinfo_pi1.comboblock.20 = USER
+plugin.tx_mmhutinfo_pi1.comboblock.20 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_area
+	localconf.fieldname			= name
+	localconf.filterfield		= area_uid
+	//localconf.elementtype		= list
+	localconf.elementtype		= combo	
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	localconf.targetpageid		= {$plugin.tx_mmhutinfo_pi1.combo.targetpid}
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.area
+	}
+
+plugin.tx_mmhutinfo_pi1.comboblock.30 = USER
+plugin.tx_mmhutinfo_pi1.comboblock.30 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_touristregion
+	localconf.fieldname			= name
+	localconf.filterfield		= touristregion_uid
+	//localconf.elementtype		= list
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	localconf.elementtype		= combo	
+	localconf.targetpageid		= {$plugin.tx_mmhutinfo_pi1.combo.targetpid}
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.region
+	}
+
+plugin.tx_mmhutinfo_pi1.comboblock.40 = USER
+plugin.tx_mmhutinfo_pi1.comboblock.40 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_type
+	localconf.fieldname			= name
+	localconf.filterfield		= type_uid
+	//localconf.elementtype		= list
+	localconf.elementtype		= combo	
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	localconf.targetpageid		= {$plugin.tx_mmhutinfo_pi1.combo.targetpid}
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.type
+	}
+
+plugin.tx_mmhutinfo_pi1.comboblock.50 = USER
+plugin.tx_mmhutinfo_pi1.comboblock.50 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_province
+	localconf.fieldname			= name
+	localconf.filterfield		= province_uid
+	//localconf.elementtype		= list
+	localconf.elementtype		= combo	
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	localconf.targetpageid		= {$plugin.tx_mmhutinfo_pi1.combo.targetpid}
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.province
+	}
+
+plugin.tx_mmhutinfo_pi1.comboblock.wrap = <div id="gencomboblock"><div class="roundedcorner roundedcorner_0003"><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><h4>H&uuml;ttensuche</h4>|</div></div></div></div></div></div></div></div></div>
+page.10.subparts.comboblock < plugin.tx_mmhutinfo_pi1.comboblock	
+
+plugin.tx_mmhutinfo_pi1.linkblock = COA
+
+plugin.tx_mmhutinfo_pi1.linkblock.10 = USER
+plugin.tx_mmhutinfo_pi1.linkblock.10 {
+	userFunc = tx_mmhutinfo_pi1->getSubTableLinkWidget
+	localconf.listView < plugin.tx_mmhutinfo_pi1.listView
+	localconf.singleView < plugin.tx_mmhutinfo_pi1.singleView
+	localconf.pidList < plugin.tx_mmhutinfo_pi1.pidList
+	localconf.recursive < plugin.tx_mmhutinfo_pi1.recursive
+	
+	localconf.tablename			= tx_mmhutinfo_touristregion
+	localconf.fieldname			= name,link
+	localconf.filterfield		= touristregion_uid
+	localconf.elementtype		= list
+	localconf.linkfield			= link
+	localconf.linktarget		= _blank
+	localconf.entry2remove		= --- nicht definiert ---,-- nicht definiert --,-- leer --
+	//localconf.elementtype		= combo	
+		
+	//localconf.firstcomboentry	= - Bitt auswählen -	
+	localconf.firstcomboentry	= firstcomboentry
+	localconf.label				= label.combo.region
+	}
+
+plugin.tx_mmhutinfo_pi1.linkblock.wrap = <div id="genlinkblock"><div class="roundedcorner roundedcorner_0003"><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><h4>Tourismusregion</h4>|</div></div></div></div></div></div></div></div></div>
+page.10.subparts.linkblock < plugin.tx_mmhutinfo_pi1.linkblock	
+	
+//------------------------------------------------------------------------------
+// The supportet fieldnames for typodbfield
+// are: image, link, filelink, stdwrap, singlelink
+//
+plugin.tx_mmhutinfo_pi1.typodbfield {
+	// Dummyfields are not in the DB but if they are 
+	// in here a fieldvalue ist requestet for them in 
+	// the framework
+	//dummyfieldlist = preview,ziplink,normallink,cattitle,big_preview_image,details,shortdescription,more
+	dummyfieldlist = pureuid,pureimage,preview,area,huttype,province,provinceimage,country,provincedesc,area_image,area_desc,hg_name,hg_description,hg_preview,hg_link,gkey,mailform_edit_page,editbutton,md5,touristregion,touristregdesc,touristregimage,touristreglink,way1,way2,way3,way4,way5,way6,way7,difficultytext,google,panorama
+	
+	pureuid {
+		field = uid
+	}
+
+	pureimage {
+		field = image
+	}
+	
+	name {
+		singlelink = 1
+		fieldtype = singlelink
+	}
+	
+	// Remove the underline if you want to have a preview picture
+	preview {
+		fieldtype = image
+		field = image
+		listNum = 0
+		
+		// Poroportions are OK - no Border
+		file.maxW = 100
+		file.maxH = 100
+		
+		# Proportions are OK - Picture always 100 x 100 (Whire Border if Picture does not really fit
+		#file.width = 150c
+		#file.height = 150
+		#file.maxW = 100
+		#file.maxH = 100
+		
+		#wrap = | <br>
+	  	# stdWrap {
+	  	# wrap = aaa | ee
+	  	# typolink.additionalParams.field = uid
+	  	# typolink.parameter.field = uid
+	  	# }
+	  	
+	  imageLinkWrap = 1
+	  secure = 0
+	  imageLinkWrap {
+			bodyTag = <BODY bgColor=black>
+			wrap = <A href="javascript:close();"> | </A>
+			width = 500m
+			height = 
+			JSwindow = 1
+			JSwindow.newWindow = 1
+			JSwindow.expand = 17,20
+			enable = 1
+    	}
+    # Kompass: http://www.kompass.at/produkte/alle_produkte/?tx_wckompproducts_pi1[sword]=3854916957
+	}
+	
+	image {
+		fieldtype = image
+		
+		// Poroportions are OK - no Border
+		file.maxW = 250
+		file.maxH = 250
+		
+		imageLinkWrap = 1
+		secure = 0
+		imageLinkWrap {
+			bodyTag = <BODY bgColor=black>
+			wrap = <A href="javascript:close();"> | </A>
+			width = 500m
+			height = 
+			JSwindow = 1
+			JSwindow.newWindow = 1
+			JSwindow.expand = 17,20
+			enable = 1
+			}
+		}
+		
+	image2 {
+		fieldtype = image
+		
+		// Poroportions are OK - no Border
+		file.maxW = 150
+		file.maxH = 150
+		
+		border = 1
+		
+		imageLinkWrap = 1
+		secure = 0
+		imageLinkWrap {
+			bodyTag = <BODY bgColor=black>
+			wrap = <A href="javascript:close();"> | </A>
+			width = 500m
+			height = 
+			JSwindow = 1
+			JSwindow.newWindow = 1
+			JSwindow.expand = 17,20
+			enable = 1
+			}
+		}
+		
+	imageway < .image2
+	imageway {
+		file.maxW = 100
+		file.maxH = 100
+	}
+
+	panorama < .image2
+	panorama {
+		file.maxW = 400
+		file.maxH = 400
+	}
+			
+	email1 {
+		fieldtype = link
+		target = _top
+	}
+
+	email2 < .email1
+	web < .email1
+	
+	area_image {
+		fieldtype = image
+		
+		// Poroportions are OK - no Border
+		file.maxW = 180
+		file.maxH = 180
+		
+		imageLinkWrap = 1
+		secure = 0
+		imageLinkWrap {
+			bodyTag = <BODY bgColor=black>
+			wrap = <A href="javascript:close();"> | </A>
+			width = 800m
+			height = 
+			JSwindow = 1
+			JSwindow.newWindow = 1
+			JSwindow.expand = 17,20
+			enable = 1
+			}
+		}
+
+	area_desc {
+		fieldtype = rtecsstext
+	}	
+
+	provincedesc < .area_desc
+	image2description < .area_desc
+	
+	hg_preview {
+		fieldtype = image
+		// Poroportions are OK - no Border
+		file.maxW = 180
+		file.maxH = 180
+	}
+	
+	hg_link {
+		fieldtype = filelink
+
+		path = uploads/$pluginname/ 
+		path2 = uploads/media/
+		icon = 1
+		size = 1
+	    size.noTrimWrap = | (|Bytes) |
+	    size.bytes = 1
+	    size.bytes.labels =   | K| M| G
+#		size.wrap = ( | )
+		jumpurl = 1
+		#jumpurl.secure = 1
+		target = _blank
+		}
+		
+	gkey {
+		// http://test2.intranet.bcserver.local/
+		value = ABQIAAAAjSWBjqj5qB3HoQJQeKfuNRTu7J0W6JtfzL_3ziseytsPC1vUMhS-u6hPiH4Pii5_-qIJKT8CyUWjcA
+		}
+		
+	mailform_edit_page {
+		value = -- dummy ---
+		}		
+
+	editbutton {
+		value = -- dummy ---
+		}	
+		
+	md5 {
+		value = -- dummy ---
+		}	
+
+	touristregion {
+		}
+		
+	touristregdesc < .area_desc
+	
+	touristregimage < .area_image
+
+	touristreglink {
+		fieldtype = link
+		}
+	
+	provinceimage < .area_image
+	
+	difficultytext < .area_image
+	
+	way1 {
+		value = -- dummy ---
+		}
+		
+	way2 < .way1
+	way3 < .way1
+	way4 < .way1
+	way5 < .way1
+	way6 < .way1
+	way7 < .way1
+	
+	google {
+		value = -- dummy ---
+		}
+	
+}
+
+
+  # Example of default set CSS styles (these go into the document header):
+plugin.tx_mmhutinfo_pi1._CSS_DEFAULT_STYLE (
+  .tx-mmhutinfo-pi1 H2 { margin-top: 0px; margin-bottom: 0px; }
+)
+  # Example of how to overrule LOCAL_LANG values for the plugin:
+plugin.tx_mmhutinfo_pi1._LOCAL_LANG.default {
+  pi_list_searchBox_search = Search!
+}
+  # Example of how to set default values from TS in the incoming array, $this->piVars of the plugin:
+plugin.tx_mmhutinfo_pi1._DEFAULT_PI_VARS.test = test

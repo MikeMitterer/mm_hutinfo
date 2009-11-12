@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+.mailformplus-edithutinfo .formline {
+	clear: both;
+	padding-bottom: 0.5em;
+	}
+	
+.mailformplus-edithutinfo .formline label {
+	display:block;
+	float:left;
+	width:110px;
+	text-align:right;
+	padding-right: 0.25em;
+	}
+	
+.mailformplus-edithutinfo .formline input,
+.mailformplus-edithutinfo .formline textarea {
+	width: 250px;
+	}
+	
+	
+.mailformplus-edithutinfo fieldset{
+	/*background-color:#fff9e7;*/
+	
+	border-width:2px;
+	border-style:solid;
+	border-color: #2B5500;
+	
+	/*font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;*/
+		
+	margin:20px 0px 20px 0px;
+	position:relative;
+	display:block;
+	padding: 0px 10px 10px 10px;
+}
+
+.mailformplus-edithutinfo fieldset legend{	
+	background-color:#2B5500;
+	
+	border-width:1px;
+	border-style:solid;
+	border-color: #254900;
+	
+	color:#ffffff;
+	font-weight:bold;
+	font-variant:small-caps;
+	font-size:110%;
+		
+	padding:2px;
+	margin:0px 0px 10px 0px;
+	position:relative;
+	top: -10px;
+	
+}	
+	

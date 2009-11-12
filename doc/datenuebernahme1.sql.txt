@@ -1,0 +1,406 @@
+INSERT INTO tabelle_neu(
+uid,              
+pid,              
+tstamp,           
+crdate,            
+cruser_id,         
+sys_language_uid, 
+l18n_parent,       
+l18n_diffsource,  
+deleted,          
+hidden,           
+name,             
+description
+) SELECT 
+uid,              
+pid,              
+tstamp,           
+crdate,            
+cruser_id,         
+sys_language_uid, 
+l18n_parent,       
+l18n_diffsource,  
+deleted,          
+hidden,           
+name,             
+description 
+FROM t3_quickstart.tx_mmhutinfo_type
+
+mysqldump -a --add-drop-table -u root -par7v8mal t3_quickstart > backup_mysql_`date +"%Y%m%d"`.sql
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_hut (
+uid,
+pid,
+tstamp,
+crdate,
+cruser_id,
+sys_language_uid,
+l18n_parent,
+deleted,
+hidden,
+starttime,
+endtime,
+fe_group,
+name,
+description,
+type_uid,
+property_uid,
+map_uid,
+hutguide_uid,
+company,
+person,
+tel1,
+fax,
+mobile,
+street,
+city,
+province_uid,
+area_uid,
+google_longitude,
+google_latitude,
+google_description,
+kitchen_description,
+height,
+open,
+beds,
+camp,
+waydescription,
+difficulty,
+walkingtime_min,
+length_km,
+altitude,
+free1,
+free2,
+free3,
+copyright,
+readyforprint
+) SELECT 
+nr,              
+66,              
+1200998965,           
+1200997645,            
+1,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+hname,
+sonstiges,
+
+type_uid,
+property_uid,
+map_uid,
+hutguide_uid,
+company,
+person,
+tel1,
+fax,
+mobile,
+street,
+city,
+province_uid,
+area_uid,
+google_longitude,
+google_latitude,
+google_description,
+kitchen_description,
+height,
+open,
+beds,
+camp,
+waydescription,
+difficulty,
+walkingtime_min,
+length_km,
+altitude,
+free1,
+free2,
+free3,
+copyright,
+readyforprint
+FROM t3_quickstart.tx_mmhutinfo_type;
+
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_type (
+uid,
+pid,
+tstamp,
+crdate,
+cruser_id,
+sys_language_uid,
+l18n_parent,
+l18n_diffsource,
+name,
+description
+) SELECT
+id,
+66,
+1200998179,
+1200997913,
+1,
+0,
+0,
+0,
+typ,
+''
+FROM bergverlag.alpen_htyp
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_extmap (
+uid,
+pid,
+cruser_id,
+sys_language_uid,
+l18n_parent,
+l18n_diffsource,
+deleted,
+hidden,
+name,
+publisher,
+mapnumber,
+description,
+isbn,
+preview
+) SELECT
+nr,
+66,
+1,
+0,
+0,
+0,
+0,
+0,
+name,
+verlag,
+kartennummer,
+bezeichnung,
+isbn,
+''
+FROM bergverlag.alpen_karten;
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_properties (
+uid,
+pid,
+tstamp,
+crdate,
+cruser_id,
+sys_language_uid,
+l18n_parent,
+l18n_diffsource,
+deleted,
+hidden,
+name,
+description,
+symbol
+) SELECT
+id,
+66,
+1201085997,
+1200998244,
+1,
+0,
+0,
+'',
+0,
+0,
+text,
+'',
+bild
+FROM bergverlag.alpen_symbole
+
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_hut (
+uid,
+pid,
+property_uid,
+tstamp,
+crdate,
+cruser_id,
+sys_language_uid,
+l18n_parent,
+l18n_diffsource,
+deleted,
+hidden,
+starttime,
+endtime,
+fe_group,
+name,
+description,
+type_uid,
+map_uid,
+company,
+person,
+tel1,
+fax1,
+mobile1,
+street,
+areacode,
+city,
+kitchen_description,
+height,
+opendesc,
+beds,
+camp,
+waydescription,
+difficulty,
+walkingtime,
+length,
+altitude,
+waydescription2,
+waydescription3,
+waydescription4,
+waydescription5,
+free1,
+free2,
+free3,
+copyright,
+readyforprint,
+tel2,
+tel3,
+fax2,
+mobile2,
+email1,
+email2,
+web,
+hcity,
+image,google_description) SELECT
+nr,
+66,
+'',
+1200998965,
+1200997645,
+1,
+0,
+0,
+'',
+0,
+0,
+0,
+0,
+0,
+hname,
+sonstiges,
+htyp,
+karte,
+'',
+person,
+tel,
+fax,
+mobile,
+strasse,
+plz,
+ort,
+kochen,
+hoehe,
+offen,
+bett,
+lager,
+weg_text,
+weg_schwer,
+weg_zeit,
+weg_lang,
+weg_hoch,
+aweg_text,
+lweg_text,
+rweg_text,
+'',
+info_text,
+'',
+'',
+bildcopy,
+0,
+an_tel,
+'',
+an_fax,
+an_mobile,
+email,
+an_email,
+url,
+hort,
+bildname,
+''
+FROM bergverlag.alpen_huetten;
+
+Tabelle aufgrund von gruppierten Feldern einer anderen Tabelle erstellen.
+	INSERT INTO test1(name) SELECT bundesland FROM alpen_huetten group by bundesland;
+
+Anzeige der Verbindung von Tabelle test (Bundesland) und der Hüttentabelle:
+	select uid,name,hname,alpen_huetten.bundesland from test1,alpen_huetten where test1.name=alpen_huetten.bundesland;
+
+Id von anderer Tabelle übernehmen
+	UPDATE alpen_huetten,test1 SET alpen_huetten.bundesland_uid=test1.uid WHERE bundesland=name
+
+Felder die auf NULL sind ändern
+	update alpen_huetten set htyp = 99 where htyp is null;
+
+INSERT INTO t3_quickstart.tx_mmhutinfo_area(
+        pid, 
+        tstamp, 
+        crdate, 
+        cruser_id, 
+        sys_language_uid, 
+        l18n_parent, 
+        l18n_diffsource, 
+        deleted, 
+        hidden, 
+        name, 
+        description, 
+        picture 
+) 
+SELECT
+        66, 
+        1200998908, 
+        1200998908, 
+        1, 
+        0, 
+        0, 
+        '', 
+        0, 
+        0, 
+        gebiet, 
+        '', 
+        '' 
+ 
+ FROM bergverlag.alpen_huetten group by gebiet;
+
+
+Anzeig aller Bundesländer
+	select 
+	    tx_mmhutinfo_hut.uid,
+	    bergverlag.alpen_huetten.hname,
+	    bundesland,
+	    tx_mmhutinfo_province.uid,
+	    tx_mmhutinfo_province.name,
+	    tx_mmhutinfo_hut.name
+	from 
+	    bergverlag.alpen_huetten,
+	    tx_mmhutinfo_hut,
+	    tx_mmhutinfo_province
+	where 
+	    tx_mmhutinfo_province.name = bergverlag.alpen_huetten.bundesland
+	and 
+	    tx_mmhutinfo_hut.name = bergverlag.alpen_huetten.hname
+
+area_ui bei hütten updaten
+	UPDATE 
+	    tx_mmhutinfo_hut,tx_mmhutinfo_province,bergverlag.alpen_huetten
+	SET 
+	    tx_mmhutinfo_hut.area_uid=tx_mmhutinfo_province.uid 
+	WHERE 
+	    tx_mmhutinfo_province.name = bergverlag.alpen_huetten.bundesland
+	AND
+	    tx_mmhutinfo_hut.name = bergverlag.alpen_huetten.hname;
+
+Anzeige aller Bundesländer bei den Hütten
+	select 
+	    tx_mmhutinfo_hut.uid,
+	    tx_mmhutinfo_hut.name,
+	    tx_mmhutinfo_hut.area_uid,
+	    tx_mmhutinfo_province.uid,
+	    tx_mmhutinfo_province.name
+	from 
+	    tx_mmhutinfo_hut,tx_mmhutinfo_province
+	where 
+	    tx_mmhutinfo_hut.area_uid=tx_mmhutinfo_province.uid;

@@ -1,0 +1,37 @@
+initPlugin kopiert
+setup erstellen
+	list_view.html
+		Minimalversion:
+			<!--###TEMPLATE_DEFAULT### begin
+				Help template for the default language, english
+			-->
+			<!--###LIST_ROW### begin -->
+			  <div ###ROWCLASS###> 
+			  	<!--###LIST_COL### begin -->
+			  	<!--###LIST_COL### end -->
+			  </div>
+			<!--###LIST_ROW### end -->
+			<!--###TEMPLATE_DEFAULT### end -->
+
+	single_view.html anlegen
+		Minimalversion:
+			<!--###TEMPLATE_DEFAULT### begin
+				Help template for the default language, english
+
+				Beschreibungsplatzhalter:
+					Beispiel:
+						Feldname: testfeld
+						Generierte Einträge:
+			
+						###LABEL_TESFELD_CLASS###
+						###LABEL_TESFELD###
+						###TESFELD_CLASS###
+						###TESFELD###
+			-->
+
+			<!--###TEMPLATE_DEFAULT### end -->
+
+generierte funktionen aus Plugin löschen
+
+Template erstellen und Plugin hinzufügen (in Typo3)
+	conf: ....
