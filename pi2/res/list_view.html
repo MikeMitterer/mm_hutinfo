@@ -14,13 +14,15 @@
 				if (GBrowserIsCompatible()) {
 				// Marker erstellen
 				function createMarker(pointMarker,html) {
-					//markerOptions = { icon:specialIcon };				
-					//var marker = new GMarker(pointMarker,markerOptions);
-					var marker = new GMarker(pointMarker);
+					markerOptions = { icon:specialIcon };				
+					var marker = new GMarker(pointMarker,markerOptions);
+					//var marker = new GMarker(pointMarker);
 					// Zeige Info Fenster bei Klick
 					GEvent.addListener(marker, 'click', function() {
 						marker.openInfoWindowHtml(html);
 						});
+					
+					map.addOverlay(marker);
 					return marker;
 				}
 				
@@ -30,12 +32,12 @@
 				var map 		= new GMap2(document.getElementById("map"));
 				var pointCenter = new GLatLng(###GOOGLE_CENTERPOS_LAT###,###GOOGLE_CENTERPOS_LONG###);
 
-		        map.addMapType(G_PHYSICAL_MAP); // GelŠnde
 		        map.addMapType(G_SATELLITE_3D_MAP); // Earth
-				
+		        map.addMapType(G_PHYSICAL_MAP); // GelŠnde
 				map.addControl(new GLargeMapControl()); // zeigt per default G_NORMAL_MAP, G_SATELLITE_MAP, G_HYBRID_MAP
+
 				map.addControl(new GMapTypeControl());
-				map.setCenter(pointCenter,###GOOGLE_CENTERPOS_ZOOM###, G_HYBRID_MAP);
+				map.setCenter(pointCenter,###GOOGLE_CENTERPOS_ZOOM###, G_PHYSICAL_MAP);
 
 				// Eigenes Icon erstellen
 				// shadow, icon dimensions, etc.
@@ -45,7 +47,7 @@
 				specialIcon.shadowSize = new GSize(37, 34);
 				specialIcon.iconAnchor = new GPoint(9, 34);
 				specialIcon.infoWindowAnchor = new GPoint(9, 2);
-				specialIcon.image = "typo3conf/ext/mm_hutinfo/pi2/res/images/icon-gmaps.gif";
+				specialIcon.image = "typo3conf/ext/mm_hutinfo/pi2/res/images/icon-gmaps.png";
 				}
 				//]]>
 				</script>
@@ -54,16 +56,10 @@
 				
 <!--###LIST_ROW### begin -->
   	<!--###LIST_COL### begin -->
-				<script type="text/javascript">
-				//<![CDATA[
-				
-				// 2 Icons mit Info-Fenster
-				var pointMarker = new GLatLng(###GOOGLE_LONGITUDE###,###GOOGLE_LATITUDE###);
-				var marker = createMarker(pointMarker,'<div style="color: #000000;font-weight: bold;">###NAME###</div>###PREVIEW###')
-				map.addOverlay(marker);
-				
-				//]]>
-				</script>
+				<script type="text/javascript">//<![CDATA[
+				var marker = createMarker(new GLatLng(###GOOGLE_LONGITUDE###,###GOOGLE_LATITUDE###),
+						'<div style="color: #000000;font-weight: bold;">###NAME###</div>###PREVIEW###')
+				//]]></script>
   	<!--###LIST_COL### end -->
 				
 <!--###LIST_ROW### end -->

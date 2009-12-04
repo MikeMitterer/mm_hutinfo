@@ -228,6 +228,9 @@ class tx_mmhutinfo_pi2 extends mmlib_extfrontend {
 					array("tx_mmhutinfo_pi1[showUid]" => $this->internal['currentRow']['uid']),
 					$this->allowCaching,$singlePid);
 				
+				$params = array('target' => "_blank");
+				$result = $this->cObj->addParams($result,$params);
+				
 				//t3lib_div::debug($result,$fieldname);
 				break;	
 					
