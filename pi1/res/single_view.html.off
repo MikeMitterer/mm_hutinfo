@@ -23,7 +23,7 @@
 -->
 </style>
 
-<h1 class="csc-firstHeader">###NAME### </h1>
+<h1 class="csc-firstHeader">###NAME### <span ###NUMBER_CLASS### style="background-color: ###COLORCODE###">###NUMBER###</span></h1>
 <h2 class="subheadline">
 	###HEIGHTMARKER###<div ###AREA_CLASS###>###AREA###</div> / <div ###HCITY_CLASS###>###HCITY###</div>
 	
@@ -309,8 +309,7 @@
 				//]]>
 				</script>
 <br /><br />
-          
-       
+
 <!--strong>Google Maps Direkt-Ansicht - jedoch ohne 3D - ohne erforderlichen <br />
 Programmdownload</strong> (nicht Dreidimensional)<br />
 <br /-->

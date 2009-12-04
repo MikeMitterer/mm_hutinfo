@@ -56,6 +56,8 @@ plugin.tx_thmailformplus_pi1.saveDB {
 	fields.waydescription6.mapping = waydescription6
 	fields.waydescription7.mapping = waydescription7
 	fields.copyright.mapping = copyright
+	fields.google_longitude.mapping = google_longitude
+	fields.google_latitude.mapping = google_latitude
     
     // Inserted by Mike (upload)
     dbimagefields = image
