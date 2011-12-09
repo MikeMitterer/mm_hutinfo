@@ -47,8 +47,8 @@ $LOCAL_LANG = Array (
 
 		'copyright' => 'Copyright:',
 	
-		'google_longitude' => 'L&auml;ngengrad:',
-		'google_latitude' => 'Breitengrad:',
+		'google_latitude' => 'L&auml;ngengrad:',
+		'google_longitude' => 'Breitengrad:',
 		'submit' => 'Absenden',
 		
 	),

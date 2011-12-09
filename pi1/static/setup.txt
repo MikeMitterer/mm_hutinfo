@@ -1,6 +1,6 @@
 plugin.tx_mmhutinfo_pi1 {
 	// Allows Caching for this plugin
-	allowCaching = 1
+	allowCaching = 0
 	allowCachingIfUserIsLoggedIn = 0
 	
 	// It is important to use the tablename AND the fieldname
