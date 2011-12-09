@@ -192,6 +192,7 @@ CREATE TABLE tx_mmhutinfo_hut (
 	starttime int(11) DEFAULT '0' NOT NULL,
 	endtime int(11) DEFAULT '0' NOT NULL,
 	fe_group int(11) DEFAULT '0' NOT NULL,
+	prioritize tinyint(3) DEFAULT '0' NOT NULL,
 	name tinytext NOT NULL,
 	number tinytext NOT NULL,
 	colorcode tinytext NOT NULL,

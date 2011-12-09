@@ -259,7 +259,12 @@
 	padding-right: 1em;
 	padding-bottom: 1em;
 	}
+	
+.tx-mmhutinfo-pi1 .prioritize {
+	background-color: #ffffef;
+	}	
 /*	
+
 .tx-mmhutinfo-pi1  .google_maps #map {
 	text-align: center;
 	margin-left: auto;

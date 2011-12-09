@@ -129,13 +129,13 @@ class tx_mmhutinfo_pi1 extends mmlib_extfrontend {
 
 		$SQL['select'] 				= 'tx_mmhutinfo_hut.*,tx_mmhutinfo_area.name as area_name,tx_mmhutinfo_province.name as province_name';
 		$SQL['from']				= 'tx_mmhutinfo_hut,tx_mmhutinfo_area,tx_mmhutinfo_province';
-		$SQL['order_by']			= ''; // Defaultsettings are made in setup.txt (order)
+		$SQL['order_by']			= 'tx_mmhutinfo_hut.prioritize DESC, tx_mmhutinfo_hut.name ASC'; // Defaultsettings are made in setup.txt (order)
 		$SQL['group_by']			= '';
     	$SQL['limit']				= ($pointer * $results_at_a_time) . ',' . $results_at_a_time;
 
 		// order_by can be overwritten by the piVar[order]
 		if(isset($this->internal["orderBy"]) && t3lib_div::inList($this->internal["orderByList"],$this->internal["orderBy"])) {
-			$SQL['order_by'] = $this->internal["orderBy"] . ($this->internal["descFlag"] ? ' DESC' : ''	);
+		//	$SQL['order_by'] = $this->internal["orderBy"] . ($this->internal["descFlag"] ? ' DESC' : ''	);
 		}
 
 		if($fCountRecords == true) {
@@ -351,6 +351,13 @@ class tx_mmhutinfo_pi1 extends mmlib_extfrontend {
 			case 'way6':
 			case 'way7':
 				$result = $this->getWayDescription($fieldname);
+				break;
+
+			case 'prioritize':
+				$result = 'prioritize';
+				if(intval(mmlib_extfrontend::getFieldContent('prioritize') == 0)) {
+					$result = '';
+				}
 				break;
 
 			default:

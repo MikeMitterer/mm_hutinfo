@@ -112,6 +112,7 @@
 			<label index="tt_content.pi_flexform.label.mailform_edit_page">Edit-Page</label>
 			<label index="tx_mmhutinfo_hut.number">Number</label>
 			<label index="tx_mmhutinfo_hut.colorcode">Colorcode</label>
+			<label index="tx_mmhutinfo_hut.prioritize">Prioritize</label>
 			<label index="tx_mmhutinfo_hut.image2description">Picture2-Description</label>
 			<label index="tt_content.list_type_pi2">MM Hut-Manager Overview</label>	
 			
@@ -226,6 +227,7 @@
 			<label index="tt_content.pi_flexform.label.single_pid">Detail-Seite</label>
 			<label index="tx_mmhutinfo_hut.number">Kennzahl</label>
 			<label index="tx_mmhutinfo_hut.colorcode">Farbwert</label>
+			<label index="tx_mmhutinfo_hut.prioritize">Priorisiert</label>
 			<label index="tx_mmhutinfo_hut.image2description">Beschreibung</label>
 			<label index="tt_content.pi_flexform.label.mailform_edit_page">Bearbeitungsseite</label>
 			<label index="tt_content.list_type_pi2">MM Hut-Manager Übersicht</label>

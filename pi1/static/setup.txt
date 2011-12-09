@@ -9,10 +9,10 @@ plugin.tx_mmhutinfo_pi1 {
 	//tx_mmhutinfo_area,tx_mmhutinfo_province
 	
 	// Important!!! - the fieldnames used above must bin in the orderByList tool
-	orderByList = tx_mmhutinfo_hut.name
+	orderByList = tx_mmhutinfo_hut.prioritize,tx_mmhutinfo_hut.name
 	
 	// Ordering can be set like this too (field must be in orderByList)
-	order = tx_mmhutinfo_hut.name:0
+	order = tx_mmhutinfo_hut.prioritize:1,tx_mmhutinfo_hut.name:0
 	//order = date_mod:1
 	
 	CMD =
@@ -472,6 +472,10 @@ plugin.tx_mmhutinfo_pi1.typodbfield {
 	
 	huttype {
 		value = -- dummy ---
+		}
+		
+	prioritize {
+		value = 
 		}
 }
 
