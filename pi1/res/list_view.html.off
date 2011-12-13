@@ -4,7 +4,7 @@
 <!--###LIST_ROW### begin -->
   <div ###ROWCLASS###> 
   	<!--###LIST_COL### begin -->
-	  	<table border="0" cellpadding="0" cellspacing="0" class="hut_list ###PRIORITIZE###">
+	  	<table border="0" cellpadding="0" cellspacing="0" class="hut_list">
 	  		<tr>
 		  		<td ###PREVIEW_CLASS###>###PREVIEW###</td>
 		  		<td class="description_container">
@@ -48,12 +48,11 @@
 		  if(urlFromCombo != '') window.location.href = urlFromCombo;   
 		}
 	</script>
-	<!--div class="label">###LABEL###</div-->
+	<div class="label">###LABEL###</div>
 	<select name="###SELECTOR_NAME###" class="###SELECTOR_NAME###" onChange="javascript:onSelect(this);">
-		<!--option value="">###FIRSTCOMBOENTRY###</option-->
-		<option value="">###LABEL###</option>
+		<option value="">###FIRSTCOMBOENTRY###</option>
 	<!-- ###SELECTOR_ITEM### begin -->
-		<option value="/###SELECTOR_ITEM_LINK_URL###" ###SELECTED###>###VALUE###</option>
+		<option value="###SELECTOR_ITEM_LINK_URL###" ###SELECTED###>###VALUE###</option>
 	<!-- ###SELECTOR_ITEM### end -->
 	</select>
 	</div>
