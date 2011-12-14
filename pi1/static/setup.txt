@@ -175,7 +175,8 @@ plugin.tx_mmhutinfo_pi1.comboblock.50 {
 	localconf.label				= label.combo.province
 	}
 
-plugin.tx_mmhutinfo_pi1.comboblock.wrap = <div id="gencomboblock"><div class="roundedcorner roundedcorner_0003"><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><h4>W&auml;hle H&uuml;tte aus...</h4>|</div></div></div></div></div></div></div></div></div>
+plugin.tx_mmhutinfo_pi1.comboblock.wrap = <div id="gencomboblock"><h4>Wähle Hütte aus...</h4>|</div>
+#<div id="gencomboblock"><div class="roundedcorner roundedcorner_0003"><div class="t"><div class="b"><div class="l"><div class="r"><div class="bl"><div class="br"><div class="tl"><div class="tr"><h4>W&auml;hle H&uuml;tte aus...</h4>|</div></div></div></div></div></div></div></div></div>
 page.10.subparts.comboblock < plugin.tx_mmhutinfo_pi1.comboblock	
 
 plugin.tx_mmhutinfo_pi1.linkblock = COA
